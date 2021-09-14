@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a767d53e715549df913467032fe6c54a" Name="Diagram1">
+        <EntityTypeShape EntityType="DBQLNhaTroModel.ChiPhi" Width="1.5" PointX="0.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBQLNhaTroModel.HoaDon" Width="1.5" PointX="7.5" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBQLNhaTroModel.KhachHang" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBQLNhaTroModel.LoaiPhong" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBQLNhaTroModel.Phong" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBQLNhaTroModel.Thang" Width="1.5" PointX="5.25" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBQLNhaTroModel.ThuePhong" Width="1.5" PointX="5.25" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBQLNhaTroModel.TraPhong" Width="1.5" PointX="7.5" PointY="7.25" IsExpanded="true" />
+        <AssociationConnector Association="DBQLNhaTroModel.FK_HoaDon_Thang" ManuallyRouted="false" />
+        <AssociationConnector Association="DBQLNhaTroModel.FK_HoaDon_ThuePhong" ManuallyRouted="false" />
+        <AssociationConnector Association="DBQLNhaTroModel.FK_ThuePhong_KhachHang" ManuallyRouted="false" />
+        <AssociationConnector Association="DBQLNhaTroModel.FK_Phong_LoaiPhong" ManuallyRouted="false" />
+        <AssociationConnector Association="DBQLNhaTroModel.FK_ThuePhong_Phong" ManuallyRouted="false" />
+        <AssociationConnector Association="DBQLNhaTroModel.FK_TraPhong_ThuePhong1" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
