@@ -44,6 +44,10 @@ namespace QLNhaTro
         
         private void loaiPhongToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            foreach (Form frm in this.MdiChildren)
+            {
+                frm.Close();
+            }
             FLoaiPhong f = new FLoaiPhong();
             f.MdiParent = this;
             f.Show();
@@ -51,6 +55,10 @@ namespace QLNhaTro
 
         private void thanhToanToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            foreach (Form frm in this.MdiChildren)
+            {
+                frm.Close();
+            }
             FTinhTien f = new FTinhTien();
             f.MdiParent = this;
             f.Show();
@@ -58,6 +66,10 @@ namespace QLNhaTro
 
         private void traPhongToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            foreach (Form frm in this.MdiChildren)
+            {
+                frm.Close();
+            }
             FTraPhong f = new FTraPhong();
             f.MdiParent = this;
             f.Show();
@@ -65,6 +77,10 @@ namespace QLNhaTro
 
         private void quanLyPhiToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            foreach (Form frm in this.MdiChildren)
+            {
+                frm.Close();
+            }
             FPhi f = new FPhi();
             f.MdiParent = this;
             f.Show();
@@ -72,6 +88,10 @@ namespace QLNhaTro
 
         private void quanLyKHToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            foreach (Form frm in this.MdiChildren)
+            {
+                frm.Close();
+            }
             FCapNhatKH f = new FCapNhatKH();
             f.MdiParent = this;
             f.Show();
@@ -79,6 +99,10 @@ namespace QLNhaTro
 
         private void danhSachPhongToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            foreach (Form frm in this.MdiChildren)
+            {
+                frm.Close();
+            }
             FPhong f = new FPhong();
             f.MdiParent = this;
             f.Show();
@@ -86,6 +110,10 @@ namespace QLNhaTro
 
         private void thuePhongToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            foreach (Form frm in this.MdiChildren)
+            {
+                frm.Close();
+            }
             FThuePhong f = new FThuePhong();
             f.MdiParent = this;
             f.Show();
@@ -93,6 +121,10 @@ namespace QLNhaTro
 
         private void capNhatPhongToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            foreach (Form frm in this.MdiChildren)
+            {
+                frm.Close();
+            }
             FCapNhatPhong f = new FCapNhatPhong();
             f.MdiParent = this;
             f.Show();

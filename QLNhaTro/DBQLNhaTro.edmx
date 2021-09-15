@@ -24,6 +24,7 @@
           <Property Name="TongTien" Type="decimal" Precision="18" Scale="0" />
           <Property Name="ThuePhongID" Type="int" />
           <Property Name="ThangID" Type="int" />
+          <Property Name="NgayLap" Type="date" />
         </EntityType>
         <EntityType Name="KhachHang">
           <Key>
@@ -35,6 +36,8 @@
           <Property Name="GioiTinh" Type="nvarchar" MaxLength="50" />
           <Property Name="NgaySinh" Type="date" />
           <Property Name="QueQuan" Type="nvarchar(max)" />
+          <Property Name="SDT" Type="nchar" MaxLength="10" />
+          <Property Name="TrangThaiThuePhong" Type="bit" />
         </EntityType>
         <EntityType Name="LoaiPhong">
           <Key>
@@ -52,6 +55,7 @@
           <Property Name="SoPhong" Type="int" />
           <Property Name="LoaiPhongID" Type="int" />
           <Property Name="TrangThai" Type="bit" />
+          <Property Name="SoNguoiToiDa" Type="int" />
         </EntityType>
         <EntityType Name="Thang">
           <Key>
@@ -70,6 +74,7 @@
           <Property Name="NgayNhanCoc" Type="date" />
           <Property Name="KhachHangID" Type="int" />
           <Property Name="PhongID" Type="int" />
+          <Property Name="TrangThaiThanhToan" Type="bit" />
         </EntityType>
         <EntityType Name="TraPhong">
           <Key>
@@ -79,6 +84,7 @@
           <Property Name="NgayTra" Type="date" />
           <Property Name="ThuePhongID" Type="int" />
           <Property Name="TraCoc" Type="bit" />
+          <Property Name="TrangThai" Type="bit" />
         </EntityType>
         <Association Name="FK_HoaDon_Thang">
           <End Role="Thang" Type="Self.Thang" Multiplicity="0..1" />
@@ -211,6 +217,7 @@
           <Property Name="ThangID" Type="Int32" />
           <NavigationProperty Name="Thang" Relationship="Self.FK_HoaDon_Thang" FromRole="HoaDon" ToRole="Thang" />
           <NavigationProperty Name="ThuePhong" Relationship="Self.FK_HoaDon_ThuePhong" FromRole="HoaDon" ToRole="ThuePhong" />
+          <Property Name="NgayLap" Type="DateTime" Precision="0" />
         </EntityType>
         <EntityType Name="KhachHang">
           <Key>
@@ -223,6 +230,8 @@
           <Property Name="NgaySinh" Type="DateTime" Precision="0" />
           <Property Name="QueQuan" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="ThuePhongs" Relationship="Self.FK_ThuePhong_KhachHang" FromRole="KhachHang" ToRole="ThuePhong" />
+          <Property Name="SDT" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="TrangThaiThuePhong" Type="Boolean" />
         </EntityType>
         <EntityType Name="LoaiPhong">
           <Key>
@@ -243,6 +252,7 @@
           <NavigationProperty Name="LoaiPhong" Relationship="Self.FK_Phong_LoaiPhong" FromRole="Phong" ToRole="LoaiPhong" />
           <NavigationProperty Name="ThuePhongs" Relationship="Self.FK_ThuePhong_Phong" FromRole="Phong" ToRole="ThuePhong" />
           <Property Name="TrangThai" Type="Boolean" />
+          <Property Name="SoNguoiToiDa" Type="Int32" />
         </EntityType>
         <EntityType Name="Thang">
           <Key>
@@ -266,6 +276,7 @@
           <NavigationProperty Name="KhachHang" Relationship="Self.FK_ThuePhong_KhachHang" FromRole="ThuePhong" ToRole="KhachHang" />
           <NavigationProperty Name="Phong" Relationship="Self.FK_ThuePhong_Phong" FromRole="ThuePhong" ToRole="Phong" />
           <NavigationProperty Name="TraPhongs" Relationship="Self.FK_TraPhong_ThuePhong1" FromRole="ThuePhong" ToRole="TraPhong" />
+          <Property Name="TrangThaiThanhToan" Type="Boolean" />
         </EntityType>
         <EntityType Name="TraPhong">
           <Key>
@@ -276,6 +287,7 @@
           <Property Name="ThuePhongID" Type="Int32" />
           <Property Name="TraCoc" Type="Boolean" />
           <NavigationProperty Name="ThuePhong" Relationship="Self.FK_TraPhong_ThuePhong1" FromRole="TraPhong" ToRole="ThuePhong" />
+          <Property Name="TrangThai" Type="Boolean" />
         </EntityType>
         <Association Name="FK_HoaDon_Thang">
           <End Role="Thang" Type="Self.Thang" Multiplicity="0..1" />
@@ -402,6 +414,7 @@
           <EntitySetMapping Name="HoaDons">
             <EntityTypeMapping TypeName="DBQLNhaTroModel.HoaDon">
               <MappingFragment StoreEntitySet="HoaDon">
+                <ScalarProperty Name="NgayLap" ColumnName="NgayLap" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="SoDien" ColumnName="SoDien" />
                 <ScalarProperty Name="SoNuoc" ColumnName="SoNuoc" />
@@ -414,6 +427,8 @@
           <EntitySetMapping Name="KhachHangs">
             <EntityTypeMapping TypeName="DBQLNhaTroModel.KhachHang">
               <MappingFragment StoreEntitySet="KhachHang">
+                <ScalarProperty Name="TrangThaiThuePhong" ColumnName="TrangThaiThuePhong" />
+                <ScalarProperty Name="SDT" ColumnName="SDT" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="HoTen" ColumnName="HoTen" />
                 <ScalarProperty Name="CMND" ColumnName="CMND" />
@@ -435,6 +450,7 @@
           <EntitySetMapping Name="Phongs">
             <EntityTypeMapping TypeName="DBQLNhaTroModel.Phong">
               <MappingFragment StoreEntitySet="Phong">
+                <ScalarProperty Name="SoNguoiToiDa" ColumnName="SoNguoiToiDa" />
                 <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="SoPhong" ColumnName="SoPhong" />
@@ -453,6 +469,7 @@
           <EntitySetMapping Name="ThuePhongs">
             <EntityTypeMapping TypeName="DBQLNhaTroModel.ThuePhong">
               <MappingFragment StoreEntitySet="ThuePhong">
+                <ScalarProperty Name="TrangThaiThanhToan" ColumnName="TrangThaiThanhToan" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="TienCoc" ColumnName="TienCoc" />
                 <ScalarProperty Name="NgayThue" ColumnName="NgayThue" />
@@ -465,6 +482,7 @@
           <EntitySetMapping Name="TraPhongs">
             <EntityTypeMapping TypeName="DBQLNhaTroModel.TraPhong">
               <MappingFragment StoreEntitySet="TraPhong">
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="NgayTra" ColumnName="NgayTra" />
                 <ScalarProperty Name="ThuePhongID" ColumnName="ThuePhongID" />

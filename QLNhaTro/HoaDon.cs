@@ -20,6 +20,7 @@ namespace QLNhaTro
         public Nullable<decimal> TongTien { get; set; }
         public Nullable<int> ThuePhongID { get; set; }
         public Nullable<int> ThangID { get; set; }
+        public Nullable<System.DateTime> NgayLap { get; set; }
     
         public virtual Thang Thang { get; set; }
         public virtual ThuePhong ThuePhong { get; set; }

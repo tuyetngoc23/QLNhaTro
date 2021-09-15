@@ -27,6 +27,7 @@ namespace QLNhaTro
         public Nullable<System.DateTime> NgayNhanCoc { get; set; }
         public Nullable<int> KhachHangID { get; set; }
         public Nullable<int> PhongID { get; set; }
+        public Nullable<bool> TrangThaiThanhToan { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HoaDon> HoaDons { get; set; }

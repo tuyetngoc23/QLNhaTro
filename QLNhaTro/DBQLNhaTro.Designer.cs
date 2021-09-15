@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'D:\HK8\LTCSDL\QLNhaTro-20210914T131837Z-001\QLNhaTro\QLNhaTro\DBQLNhaTro.edmx'. 
+﻿// T4 code generation is enabled for model 'D:\HK8\LTCSDL\QLNhaTro\QLNhaTro\DBQLNhaTro.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
