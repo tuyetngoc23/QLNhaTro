@@ -19,6 +19,7 @@ namespace QLNhaTro.BUS
         {
             dg.DataSource = dPhong.LayDSPTrong();
         }
+
         public void LayDSPhong(DataGridView dg)
         {
             dg.DataSource = dPhong.LayDSPhong();
@@ -40,5 +41,6 @@ namespace QLNhaTro.BUS
                 return false;
             }
         }
+
     }
 }

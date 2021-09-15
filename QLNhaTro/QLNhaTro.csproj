@@ -55,10 +55,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\BUS_KhachHang.cs" />
+    <Compile Include="BUS\BUS_Phi.cs" />
     <Compile Include="BUS\BUS_Phong.cs" />
     <Compile Include="ChiPhi.cs">
       <DependentUpon>DBQLNhaTro.tt</DependentUpon>
     </Compile>
+    <Compile Include="DAO\DAO_KhachHang.cs" />
+    <Compile Include="DAO\DAO_Phi.cs" />
     <Compile Include="DAO\DAO_Phong.cs" />
     <Compile Include="DBQLNhaTro.Context.cs">
       <AutoGen>True</AutoGen>
@@ -240,8 +244,6 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BUS\NewFolder1\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

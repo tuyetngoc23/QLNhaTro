@@ -29,14 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cbLon = new System.Windows.Forms.ComboBox();
-            this.cbVua = new System.Windows.Forms.ComboBox();
-            this.cbNho = new System.Windows.Forms.ComboBox();
-            this.cbDV = new System.Windows.Forms.ComboBox();
-            this.cbNuoc = new System.Windows.Forms.ComboBox();
-            this.cbDien = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -58,6 +52,18 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.imgIcon = new System.Windows.Forms.ImageList(this.components);
             this.dGVPhong = new System.Windows.Forms.DataGridView();
+            this.txtPhongNho = new System.Windows.Forms.TextBox();
+            this.txtPhongVua = new System.Windows.Forms.TextBox();
+            this.txtPhongLon = new System.Windows.Forms.TextBox();
+            this.txtNuoc = new System.Windows.Forms.TextBox();
+            this.txtRac = new System.Windows.Forms.TextBox();
+            this.txtDien = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txtWifi = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.txtDichVu = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVPhong)).BeginInit();
@@ -66,16 +72,22 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.PowderBlue;
-            this.panel1.Controls.Add(this.cbLon);
-            this.panel1.Controls.Add(this.cbVua);
-            this.panel1.Controls.Add(this.cbNho);
-            this.panel1.Controls.Add(this.cbDV);
-            this.panel1.Controls.Add(this.cbNuoc);
-            this.panel1.Controls.Add(this.cbDien);
+            this.panel1.Controls.Add(this.txtDichVu);
+            this.panel1.Controls.Add(this.txtWifi);
+            this.panel1.Controls.Add(this.txtRac);
+            this.panel1.Controls.Add(this.txtDien);
+            this.panel1.Controls.Add(this.txtNuoc);
+            this.panel1.Controls.Add(this.txtPhongNho);
+            this.panel1.Controls.Add(this.txtPhongLon);
+            this.panel1.Controls.Add(this.txtPhongVua);
             this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.label21);
+            this.panel1.Controls.Add(this.label19);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label13);
+            this.panel1.Controls.Add(this.label20);
+            this.panel1.Controls.Add(this.label18);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.label9);
@@ -93,100 +105,10 @@
             this.panel1.Size = new System.Drawing.Size(329, 422);
             this.panel1.TabIndex = 0;
             // 
-            // cbLon
-            // 
-            this.cbLon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbLon.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
-            this.cbLon.Enabled = false;
-            this.cbLon.FormattingEnabled = true;
-            this.cbLon.Items.AddRange(new object[] {
-            "Nhỏ ",
-            "Vừa",
-            "Lớn"});
-            this.cbLon.Location = new System.Drawing.Point(165, 180);
-            this.cbLon.Name = "cbLon";
-            this.cbLon.Size = new System.Drawing.Size(100, 26);
-            this.cbLon.TabIndex = 26;
-            // 
-            // cbVua
-            // 
-            this.cbVua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbVua.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
-            this.cbVua.Enabled = false;
-            this.cbVua.FormattingEnabled = true;
-            this.cbVua.Items.AddRange(new object[] {
-            "Nhỏ ",
-            "Vừa",
-            "Lớn"});
-            this.cbVua.Location = new System.Drawing.Point(165, 144);
-            this.cbVua.Name = "cbVua";
-            this.cbVua.Size = new System.Drawing.Size(100, 26);
-            this.cbVua.TabIndex = 25;
-            // 
-            // cbNho
-            // 
-            this.cbNho.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbNho.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
-            this.cbNho.Enabled = false;
-            this.cbNho.FormattingEnabled = true;
-            this.cbNho.Items.AddRange(new object[] {
-            "Nhỏ ",
-            "Vừa",
-            "Lớn"});
-            this.cbNho.Location = new System.Drawing.Point(165, 109);
-            this.cbNho.Name = "cbNho";
-            this.cbNho.Size = new System.Drawing.Size(100, 26);
-            this.cbNho.TabIndex = 24;
-            // 
-            // cbDV
-            // 
-            this.cbDV.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbDV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
-            this.cbDV.Enabled = false;
-            this.cbDV.FormattingEnabled = true;
-            this.cbDV.Items.AddRange(new object[] {
-            "Nhỏ ",
-            "Vừa",
-            "Lớn"});
-            this.cbDV.Location = new System.Drawing.Point(165, 336);
-            this.cbDV.Name = "cbDV";
-            this.cbDV.Size = new System.Drawing.Size(100, 26);
-            this.cbDV.TabIndex = 23;
-            // 
-            // cbNuoc
-            // 
-            this.cbNuoc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbNuoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
-            this.cbNuoc.Enabled = false;
-            this.cbNuoc.FormattingEnabled = true;
-            this.cbNuoc.Items.AddRange(new object[] {
-            "Nhỏ ",
-            "Vừa",
-            "Lớn"});
-            this.cbNuoc.Location = new System.Drawing.Point(165, 300);
-            this.cbNuoc.Name = "cbNuoc";
-            this.cbNuoc.Size = new System.Drawing.Size(100, 26);
-            this.cbNuoc.TabIndex = 22;
-            // 
-            // cbDien
-            // 
-            this.cbDien.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbDien.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
-            this.cbDien.Enabled = false;
-            this.cbDien.FormattingEnabled = true;
-            this.cbDien.Items.AddRange(new object[] {
-            "Nhỏ ",
-            "Vừa",
-            "Lớn"});
-            this.cbDien.Location = new System.Drawing.Point(165, 265);
-            this.cbDien.Name = "cbDien";
-            this.cbDien.Size = new System.Drawing.Size(100, 26);
-            this.cbDien.TabIndex = 21;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(274, 303);
+            this.label10.Location = new System.Drawing.Point(268, 262);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(74, 31);
             this.label10.TabIndex = 20;
@@ -195,16 +117,16 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(274, 339);
+            this.label11.Location = new System.Drawing.Point(268, 297);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(72, 31);
+            this.label11.Size = new System.Drawing.Size(100, 31);
             this.label11.TabIndex = 19;
-            this.label11.Text = "VND";
+            this.label11.Text = "/Phòng";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(265, 268);
+            this.label12.Location = new System.Drawing.Point(259, 231);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(91, 31);
             this.label12.TabIndex = 18;
@@ -213,7 +135,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(28, 303);
+            this.label13.Location = new System.Drawing.Point(22, 262);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(130, 31);
             this.label13.TabIndex = 14;
@@ -222,16 +144,16 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(28, 339);
+            this.label14.Location = new System.Drawing.Point(22, 297);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(154, 31);
+            this.label14.Size = new System.Drawing.Size(71, 31);
             this.label14.TabIndex = 13;
-            this.label14.Text = "Phí dịch vụ:";
+            this.label14.Text = "Rác:";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(28, 268);
+            this.label15.Location = new System.Drawing.Point(22, 231);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(122, 31);
             this.label15.TabIndex = 12;
@@ -240,7 +162,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(274, 145);
+            this.label9.Location = new System.Drawing.Point(268, 120);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(72, 31);
             this.label9.TabIndex = 11;
@@ -249,7 +171,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(274, 181);
+            this.label8.Location = new System.Drawing.Point(268, 156);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(72, 31);
             this.label8.TabIndex = 10;
@@ -258,7 +180,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(274, 112);
+            this.label7.Location = new System.Drawing.Point(268, 87);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(72, 31);
             this.label7.TabIndex = 9;
@@ -269,7 +191,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(8, 227);
+            this.label6.Location = new System.Drawing.Point(2, 200);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(241, 31);
             this.label6.TabIndex = 5;
@@ -278,7 +200,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(28, 145);
+            this.label5.Location = new System.Drawing.Point(22, 120);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(200, 31);
             this.label5.TabIndex = 4;
@@ -287,7 +209,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(28, 181);
+            this.label4.Location = new System.Drawing.Point(22, 156);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(192, 31);
             this.label4.TabIndex = 3;
@@ -296,7 +218,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 112);
+            this.label3.Location = new System.Drawing.Point(22, 87);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(201, 31);
             this.label3.TabIndex = 2;
@@ -307,7 +229,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(8, 71);
+            this.label2.Location = new System.Drawing.Point(2, 46);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(174, 31);
             this.label2.TabIndex = 1;
@@ -318,7 +240,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(99, 25);
+            this.label1.Location = new System.Drawing.Point(93, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(152, 37);
             this.label1.TabIndex = 0;
@@ -374,8 +296,8 @@
             // 
             // dGVPhong
             // 
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            this.dGVPhong.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            this.dGVPhong.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dGVPhong.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dGVPhong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGVPhong.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -386,6 +308,109 @@
             this.dGVPhong.Size = new System.Drawing.Size(750, 314);
             this.dGVPhong.TabIndex = 7;
             this.dGVPhong.DoubleClick += new System.EventHandler(this.dGVPhong_DoubleClick);
+            // 
+            // txtPhongNho
+            // 
+            this.txtPhongNho.Enabled = false;
+            this.txtPhongNho.Location = new System.Drawing.Point(159, 83);
+            this.txtPhongNho.Name = "txtPhongNho";
+            this.txtPhongNho.Size = new System.Drawing.Size(99, 38);
+            this.txtPhongNho.TabIndex = 27;
+            this.txtPhongNho.Text = "0";
+            // 
+            // txtPhongVua
+            // 
+            this.txtPhongVua.Enabled = false;
+            this.txtPhongVua.Location = new System.Drawing.Point(159, 117);
+            this.txtPhongVua.Name = "txtPhongVua";
+            this.txtPhongVua.Size = new System.Drawing.Size(99, 38);
+            this.txtPhongVua.TabIndex = 27;
+            this.txtPhongVua.Text = "0";
+            // 
+            // txtPhongLon
+            // 
+            this.txtPhongLon.Enabled = false;
+            this.txtPhongLon.Location = new System.Drawing.Point(159, 149);
+            this.txtPhongLon.Name = "txtPhongLon";
+            this.txtPhongLon.Size = new System.Drawing.Size(99, 38);
+            this.txtPhongLon.TabIndex = 27;
+            this.txtPhongLon.Text = "0";
+            // 
+            // txtNuoc
+            // 
+            this.txtNuoc.Enabled = false;
+            this.txtNuoc.Location = new System.Drawing.Point(159, 262);
+            this.txtNuoc.Name = "txtNuoc";
+            this.txtNuoc.Size = new System.Drawing.Size(99, 38);
+            this.txtNuoc.TabIndex = 27;
+            // 
+            // txtRac
+            // 
+            this.txtRac.Enabled = false;
+            this.txtRac.Location = new System.Drawing.Point(159, 294);
+            this.txtRac.Name = "txtRac";
+            this.txtRac.Size = new System.Drawing.Size(99, 38);
+            this.txtRac.TabIndex = 27;
+            // 
+            // txtDien
+            // 
+            this.txtDien.Enabled = false;
+            this.txtDien.Location = new System.Drawing.Point(159, 228);
+            this.txtDien.Name = "txtDien";
+            this.txtDien.Size = new System.Drawing.Size(99, 38);
+            this.txtDien.TabIndex = 27;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(22, 328);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(113, 31);
+            this.label18.TabIndex = 13;
+            this.label18.Text = "Phí Wifi:";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(268, 328);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(100, 31);
+            this.label19.TabIndex = 19;
+            this.label19.Text = "/Phòng";
+            // 
+            // txtWifi
+            // 
+            this.txtWifi.Enabled = false;
+            this.txtWifi.Location = new System.Drawing.Point(159, 325);
+            this.txtWifi.Name = "txtWifi";
+            this.txtWifi.Size = new System.Drawing.Size(99, 38);
+            this.txtWifi.TabIndex = 27;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(22, 359);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(154, 31);
+            this.label20.TabIndex = 13;
+            this.label20.Text = "Phí dịch vụ:";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(268, 359);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(100, 31);
+            this.label21.TabIndex = 19;
+            this.label21.Text = "/Phòng";
+            // 
+            // txtDichVu
+            // 
+            this.txtDichVu.Enabled = false;
+            this.txtDichVu.Location = new System.Drawing.Point(159, 356);
+            this.txtDichVu.Name = "txtDichVu";
+            this.txtDichVu.Size = new System.Drawing.Size(99, 38);
+            this.txtDichVu.TabIndex = 27;
             // 
             // FPhong
             // 
@@ -435,13 +460,19 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.ComboBox cbLoai;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ComboBox cbDien;
-        private System.Windows.Forms.ComboBox cbDV;
-        private System.Windows.Forms.ComboBox cbNuoc;
-        private System.Windows.Forms.ComboBox cbLon;
-        private System.Windows.Forms.ComboBox cbVua;
-        private System.Windows.Forms.ComboBox cbNho;
         private System.Windows.Forms.ImageList imgIcon;
         private System.Windows.Forms.DataGridView dGVPhong;
+        private System.Windows.Forms.TextBox txtRac;
+        private System.Windows.Forms.TextBox txtDien;
+        private System.Windows.Forms.TextBox txtNuoc;
+        private System.Windows.Forms.TextBox txtPhongNho;
+        private System.Windows.Forms.TextBox txtPhongLon;
+        private System.Windows.Forms.TextBox txtPhongVua;
+        private System.Windows.Forms.TextBox txtDichVu;
+        private System.Windows.Forms.TextBox txtWifi;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label18;
     }
 }

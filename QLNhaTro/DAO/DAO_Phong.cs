@@ -18,11 +18,12 @@ namespace QLNhaTro.DAO
             var ds = db.Phongs.Where(s => s.TrangThai == false)
                 .Select(s => new { 
                             s.ID,
-                            s.LoaiPhong.Ten,
+                            TenLoaiPhong = s.LoaiPhong.Ten,
                             s.SoPhong
                         }).ToList();
             return ds;
         }
+<<<<<<< HEAD
         public dynamic LayDSPhong()
         {
             var ds = db.Phongs.Select(s => new 
@@ -50,5 +51,8 @@ namespace QLNhaTro.DAO
             db.LoaiPhongs.Add(p);
             db.SaveChanges();
         }
+=======
+        
+>>>>>>> 85fe5bcbbedbdf72ea6d68a014bb35e10e1b1594
     }
 }
