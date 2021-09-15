@@ -254,6 +254,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
             this.Name = "FMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý nhà trọ";
             this.pnlTop.ResumeLayout(false);
             this.pnlTop.PerformLayout();
