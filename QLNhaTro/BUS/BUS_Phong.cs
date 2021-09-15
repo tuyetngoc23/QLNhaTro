@@ -19,5 +19,6 @@ namespace QLNhaTro.BUS
         {
             dg.DataSource = dPhong.LayDSPTrong();
         }
+        
     }
 }

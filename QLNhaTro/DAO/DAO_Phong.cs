@@ -18,10 +18,11 @@ namespace QLNhaTro.DAO
             var ds = db.Phongs.Where(s => s.TrangThai == false)
                 .Select(s => new { 
                             s.ID,
-                            s.LoaiPhong.Ten,
+                            TenLoaiPhong = s.LoaiPhong.Ten,
                             s.SoPhong
                         }).ToList();
             return ds;
         }
+        
     }
 }
