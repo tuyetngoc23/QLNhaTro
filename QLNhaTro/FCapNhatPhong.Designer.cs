@@ -53,7 +53,7 @@
             this.label1.ForeColor = System.Drawing.Color.Red;
             this.label1.Location = new System.Drawing.Point(343, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(381, 46);
+            this.label1.Size = new System.Drawing.Size(283, 36);
             this.label1.TabIndex = 0;
             this.label1.Text = "CẬP NHẬT PHÒNG";
             // 
@@ -73,7 +73,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(48, 72);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(141, 31);
+            this.label2.Size = new System.Drawing.Size(106, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "Mã phòng:";
             // 
@@ -82,14 +82,14 @@
             this.tbMa.BackColor = System.Drawing.Color.White;
             this.tbMa.Location = new System.Drawing.Point(183, 69);
             this.tbMa.Name = "tbMa";
-            this.tbMa.Size = new System.Drawing.Size(215, 38);
+            this.tbMa.Size = new System.Drawing.Size(215, 30);
             this.tbMa.TabIndex = 3;
             // 
             // tbPhong
             // 
             this.tbPhong.Location = new System.Drawing.Point(183, 104);
             this.tbPhong.Name = "tbPhong";
-            this.tbPhong.Size = new System.Drawing.Size(215, 38);
+            this.tbPhong.Size = new System.Drawing.Size(215, 30);
             this.tbPhong.TabIndex = 5;
             // 
             // label3
@@ -97,7 +97,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(48, 107);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(151, 31);
+            this.label3.Size = new System.Drawing.Size(113, 25);
             this.label3.TabIndex = 4;
             this.label3.Text = "Tên phòng:";
             // 
@@ -106,7 +106,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(48, 142);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(155, 31);
+            this.label4.Size = new System.Drawing.Size(115, 25);
             this.label4.TabIndex = 6;
             this.label4.Text = "Loại phòng:";
             // 
@@ -114,10 +114,10 @@
             // 
             this.tbHienTai.BackColor = System.Drawing.Color.White;
             this.tbHienTai.Enabled = false;
-            this.tbHienTai.Location = new System.Drawing.Point(624, 104);
+            this.tbHienTai.Location = new System.Drawing.Point(648, 104);
             this.tbHienTai.Name = "tbHienTai";
             this.tbHienTai.ReadOnly = true;
-            this.tbHienTai.Size = new System.Drawing.Size(215, 38);
+            this.tbHienTai.Size = new System.Drawing.Size(215, 30);
             this.tbHienTai.TabIndex = 15;
             this.tbHienTai.Text = "0";
             // 
@@ -126,15 +126,15 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(489, 107);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(222, 31);
+            this.label7.Size = new System.Drawing.Size(163, 25);
             this.label7.TabIndex = 14;
             this.label7.Text = "Số người hiện tại;";
             // 
             // tbToiDa
             // 
-            this.tbToiDa.Location = new System.Drawing.Point(624, 69);
+            this.tbToiDa.Location = new System.Drawing.Point(648, 68);
             this.tbToiDa.Name = "tbToiDa";
-            this.tbToiDa.Size = new System.Drawing.Size(215, 38);
+            this.tbToiDa.Size = new System.Drawing.Size(215, 30);
             this.tbToiDa.TabIndex = 13;
             // 
             // label8
@@ -142,7 +142,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(489, 72);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(201, 31);
+            this.label8.Size = new System.Drawing.Size(148, 25);
             this.label8.TabIndex = 12;
             this.label8.Text = "Số người tối đa:";
             // 
@@ -179,12 +179,12 @@
             this.cbLoai.FormattingEnabled = true;
             this.cbLoai.Location = new System.Drawing.Point(183, 139);
             this.cbLoai.Name = "cbLoai";
-            this.cbLoai.Size = new System.Drawing.Size(215, 39);
+            this.cbLoai.Size = new System.Drawing.Size(215, 33);
             this.cbLoai.TabIndex = 19;
             // 
             // FCapNhatPhong
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PowderBlue;
             this.ClientSize = new System.Drawing.Size(959, 440);

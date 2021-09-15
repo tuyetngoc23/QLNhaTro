@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace QLNhaTro
 {
-    public partial class FDSKhachThue : Form
+    public partial class FTinhTien : Form
     {
-        public FDSKhachThue()
+        public FTinhTien()
         {
             InitializeComponent();
-        }
-
-        private void FDSKhachThue_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
