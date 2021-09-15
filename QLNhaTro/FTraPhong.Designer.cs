@@ -69,7 +69,7 @@
             this.label1.ForeColor = System.Drawing.Color.Red;
             this.label1.Location = new System.Drawing.Point(362, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(201, 36);
+            this.label1.Size = new System.Drawing.Size(267, 46);
             this.label1.TabIndex = 0;
             this.label1.Text = "TRẢ PHÒNG";
             // 
@@ -124,7 +124,7 @@
             // 
             this.textBox7.Location = new System.Drawing.Point(101, 87);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(178, 30);
+            this.textBox7.Size = new System.Drawing.Size(178, 38);
             this.textBox7.TabIndex = 13;
             this.textBox7.Tag = "";
             // 
@@ -134,7 +134,7 @@
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(6, 90);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(106, 25);
+            this.label8.Size = new System.Drawing.Size(141, 31);
             this.label8.TabIndex = 12;
             this.label8.Text = "Mã phòng:";
             // 
@@ -142,7 +142,7 @@
             // 
             this.textBox6.Location = new System.Drawing.Point(689, 29);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(178, 30);
+            this.textBox6.Size = new System.Drawing.Size(178, 38);
             this.textBox6.TabIndex = 11;
             this.textBox6.Tag = "";
             // 
@@ -152,7 +152,7 @@
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(594, 32);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(78, 25);
+            this.label7.Size = new System.Drawing.Size(104, 31);
             this.label7.TabIndex = 10;
             this.label7.Text = "CMND:";
             // 
@@ -160,7 +160,7 @@
             // 
             this.textBox5.Location = new System.Drawing.Point(400, 58);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(178, 30);
+            this.textBox5.Size = new System.Drawing.Size(178, 38);
             this.textBox5.TabIndex = 9;
             this.textBox5.Tag = "";
             // 
@@ -170,7 +170,7 @@
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(305, 61);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(59, 25);
+            this.label6.Size = new System.Drawing.Size(77, 31);
             this.label6.TabIndex = 8;
             this.label6.Text = "SĐT:";
             // 
@@ -178,7 +178,7 @@
             // 
             this.textBox4.Location = new System.Drawing.Point(689, 58);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(178, 30);
+            this.textBox4.Size = new System.Drawing.Size(178, 38);
             this.textBox4.TabIndex = 7;
             this.textBox4.Tag = "";
             // 
@@ -188,7 +188,7 @@
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(594, 61);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 25);
+            this.label5.Size = new System.Drawing.Size(105, 31);
             this.label5.TabIndex = 6;
             this.label5.Text = "Địa chỉ:";
             // 
@@ -196,7 +196,7 @@
             // 
             this.textBox3.Location = new System.Drawing.Point(400, 29);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(178, 30);
+            this.textBox3.Size = new System.Drawing.Size(178, 38);
             this.textBox3.TabIndex = 5;
             this.textBox3.Tag = "";
             // 
@@ -206,7 +206,7 @@
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(305, 32);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(105, 25);
+            this.label4.Size = new System.Drawing.Size(143, 31);
             this.label4.TabIndex = 4;
             this.label4.Text = "Ngày sinh:";
             // 
@@ -214,7 +214,7 @@
             // 
             this.textBox2.Location = new System.Drawing.Point(101, 58);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(178, 30);
+            this.textBox2.Size = new System.Drawing.Size(178, 38);
             this.textBox2.TabIndex = 3;
             this.textBox2.Tag = "";
             // 
@@ -224,7 +224,7 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(6, 61);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 25);
+            this.label3.Size = new System.Drawing.Size(121, 31);
             this.label3.TabIndex = 2;
             this.label3.Text = "Giới tính:";
             // 
@@ -232,7 +232,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(101, 29);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(178, 30);
+            this.textBox1.Size = new System.Drawing.Size(178, 38);
             this.textBox1.TabIndex = 1;
             // 
             // label2
@@ -241,7 +241,7 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(6, 32);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 25);
+            this.label2.Size = new System.Drawing.Size(102, 31);
             this.label2.TabIndex = 0;
             this.label2.Text = "Họ tên:";
             // 
@@ -266,7 +266,7 @@
             // 
             this.textBox8.Location = new System.Drawing.Point(103, 87);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(178, 30);
+            this.textBox8.Size = new System.Drawing.Size(178, 38);
             this.textBox8.TabIndex = 19;
             this.textBox8.Tag = "";
             // 
@@ -276,7 +276,7 @@
             this.label10.ForeColor = System.Drawing.Color.Black;
             this.label10.Location = new System.Drawing.Point(8, 31);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(89, 25);
+            this.label10.Size = new System.Drawing.Size(119, 31);
             this.label10.TabIndex = 16;
             this.label10.Text = "Mã thuê:";
             // 
@@ -286,7 +286,7 @@
             this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.Location = new System.Drawing.Point(8, 90);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(93, 25);
+            this.label9.Size = new System.Drawing.Size(125, 31);
             this.label9.TabIndex = 18;
             this.label9.Text = "Tiền cọc:";
             // 
@@ -296,7 +296,7 @@
             this.label11.ForeColor = System.Drawing.Color.Black;
             this.label11.Location = new System.Drawing.Point(8, 60);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(107, 25);
+            this.label11.Size = new System.Drawing.Size(146, 31);
             this.label11.TabIndex = 14;
             this.label11.Text = "Ngày thuê:";
             // 
@@ -304,7 +304,7 @@
             // 
             this.textBox9.Location = new System.Drawing.Point(103, 28);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(178, 30);
+            this.textBox9.Size = new System.Drawing.Size(178, 38);
             this.textBox9.TabIndex = 17;
             this.textBox9.Tag = "";
             // 
@@ -312,7 +312,7 @@
             // 
             this.textBox10.Location = new System.Drawing.Point(103, 57);
             this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(178, 30);
+            this.textBox10.Size = new System.Drawing.Size(178, 38);
             this.textBox10.TabIndex = 15;
             this.textBox10.Tag = "";
             // 
@@ -322,7 +322,7 @@
             this.label12.ForeColor = System.Drawing.Color.Black;
             this.label12.Location = new System.Drawing.Point(589, 333);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(91, 25);
+            this.label12.Size = new System.Drawing.Size(125, 31);
             this.label12.TabIndex = 20;
             this.label12.Text = "Ngày trả:";
             // 
@@ -331,7 +331,7 @@
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(692, 333);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(178, 30);
+            this.dateTimePicker1.Size = new System.Drawing.Size(178, 38);
             this.dateTimePicker1.TabIndex = 21;
             // 
             // button1
@@ -345,7 +345,7 @@
             // 
             // FTraPhong
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PowderBlue;
             this.ClientSize = new System.Drawing.Size(892, 428);
@@ -360,6 +360,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FTraPhong";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmTraPhong";
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dvgTraPhong)).EndInit();

@@ -42,14 +42,6 @@ namespace QLNhaTro
             }
         }
         
-
-        private void phòngToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FCapNhatPhong f = new FCapNhatPhong();
-            f.MdiParent = this;
-            f.Show();
-        }
-
         private void loaiPhongToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FLoaiPhong f = new FLoaiPhong();
@@ -81,6 +73,27 @@ namespace QLNhaTro
         private void quanLyKHToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FCapNhatKH f = new FCapNhatKH();
+            f.MdiParent = this;
+            f.Show();
+        }
+
+        private void danhSachPhongToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FPhong f = new FPhong();
+            f.MdiParent = this;
+            f.Show();
+        }
+
+        private void thuePhongToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FThuePhong f = new FThuePhong();
+            f.MdiParent = this;
+            f.Show();
+        }
+
+        private void capNhatPhongToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FCapNhatPhong f = new FCapNhatPhong();
             f.MdiParent = this;
             f.Show();
         }

@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace QLNhaTro
 {
-    public partial class FTrangChu : Form
+    public partial class FPhong : Form
     {
         BUS_Phong bPhong;
-        public FTrangChu()
+        public FPhong()
         {
             InitializeComponent();
             bPhong = new BUS_Phong();

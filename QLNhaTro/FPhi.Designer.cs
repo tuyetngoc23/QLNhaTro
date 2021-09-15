@@ -49,7 +49,7 @@
             this.label1.ForeColor = System.Drawing.Color.Red;
             this.label1.Location = new System.Drawing.Point(300, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(371, 36);
+            this.label1.Size = new System.Drawing.Size(489, 46);
             this.label1.TabIndex = 0;
             this.label1.Text = "QUẢN LÝ CÁC LOẠI PHÍ";
             // 
@@ -69,7 +69,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(42, 84);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 25);
+            this.label2.Size = new System.Drawing.Size(102, 31);
             this.label2.TabIndex = 2;
             this.label2.Text = "Mã phí:";
             // 
@@ -79,14 +79,14 @@
             this.tbMa.Location = new System.Drawing.Point(112, 81);
             this.tbMa.Name = "tbMa";
             this.tbMa.ReadOnly = true;
-            this.tbMa.Size = new System.Drawing.Size(135, 30);
+            this.tbMa.Size = new System.Drawing.Size(135, 38);
             this.tbMa.TabIndex = 3;
             // 
             // tbTen
             // 
             this.tbTen.Location = new System.Drawing.Point(386, 81);
             this.tbTen.Name = "tbTen";
-            this.tbTen.Size = new System.Drawing.Size(170, 30);
+            this.tbTen.Size = new System.Drawing.Size(170, 38);
             this.tbTen.TabIndex = 5;
             // 
             // label3
@@ -94,7 +94,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(311, 84);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 25);
+            this.label3.Size = new System.Drawing.Size(112, 31);
             this.label3.TabIndex = 4;
             this.label3.Text = "Tên phí:";
             // 
@@ -102,7 +102,7 @@
             // 
             this.tbGia.Location = new System.Drawing.Point(716, 81);
             this.tbGia.Name = "tbGia";
-            this.tbGia.Size = new System.Drawing.Size(135, 30);
+            this.tbGia.Size = new System.Drawing.Size(135, 38);
             this.tbGia.TabIndex = 7;
             // 
             // label4
@@ -110,7 +110,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(638, 84);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 25);
+            this.label4.Size = new System.Drawing.Size(115, 31);
             this.label4.TabIndex = 6;
             this.label4.Text = "Giá tiền:";
             // 
@@ -143,7 +143,7 @@
             // 
             // FPhi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PowderBlue;
             this.ClientSize = new System.Drawing.Size(892, 428);
@@ -162,6 +162,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FPhi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPhi";
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhi)).EndInit();
             this.ResumeLayout(false);

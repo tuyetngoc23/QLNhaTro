@@ -42,12 +42,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.btThem = new System.Windows.Forms.Button();
             this.btCSua = new System.Windows.Forms.Button();
             this.btXoa = new System.Windows.Forms.Button();
             this.dtpNgay = new System.Windows.Forms.DateTimePicker();
             this.cbGioiTinh = new System.Windows.Forms.ComboBox();
-            this.cbMaPhong = new System.Windows.Forms.ComboBox();
+            this.cbPhong = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKH)).BeginInit();
             this.SuspendLayout();
@@ -175,15 +174,6 @@
             this.label9.TabIndex = 10;
             this.label9.Text = "Giới tính:";
             // 
-            // btThem
-            // 
-            this.btThem.Location = new System.Drawing.Point(523, 212);
-            this.btThem.Name = "btThem";
-            this.btThem.Size = new System.Drawing.Size(89, 37);
-            this.btThem.TabIndex = 18;
-            this.btThem.Text = "Thêm";
-            this.btThem.UseVisualStyleBackColor = true;
-            // 
             // btCSua
             // 
             this.btCSua.Location = new System.Drawing.Point(646, 212);
@@ -222,23 +212,23 @@
             this.cbGioiTinh.Size = new System.Drawing.Size(202, 39);
             this.cbGioiTinh.TabIndex = 22;
             // 
-            // cbMaPhong
+            // cbPhong
             // 
-            this.cbMaPhong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbMaPhong.FormattingEnabled = true;
-            this.cbMaPhong.Location = new System.Drawing.Point(649, 177);
-            this.cbMaPhong.Name = "cbMaPhong";
-            this.cbMaPhong.Size = new System.Drawing.Size(202, 39);
-            this.cbMaPhong.TabIndex = 24;
+            this.cbPhong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbPhong.FormattingEnabled = true;
+            this.cbPhong.Location = new System.Drawing.Point(649, 177);
+            this.cbPhong.Name = "cbPhong";
+            this.cbPhong.Size = new System.Drawing.Size(202, 39);
+            this.cbPhong.TabIndex = 24;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(516, 180);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(141, 31);
+            this.label6.Size = new System.Drawing.Size(100, 31);
             this.label6.TabIndex = 23;
-            this.label6.Text = "Mã phòng:";
+            this.label6.Text = "Phòng:";
             // 
             // FCapNhatKH
             // 
@@ -246,13 +236,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PowderBlue;
             this.ClientSize = new System.Drawing.Size(1072, 440);
-            this.Controls.Add(this.cbMaPhong);
+            this.Controls.Add(this.cbPhong);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.cbGioiTinh);
             this.Controls.Add(this.dtpNgay);
             this.Controls.Add(this.btXoa);
             this.Controls.Add(this.btCSua);
-            this.Controls.Add(this.btThem);
             this.Controls.Add(this.tbSdt);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
@@ -271,6 +260,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FCapNhatKH";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCapNhatKH";
             this.Load += new System.EventHandler(this.FCapNhatKH_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvKH)).EndInit();
@@ -295,12 +285,11 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button btThem;
         private System.Windows.Forms.Button btCSua;
         private System.Windows.Forms.Button btXoa;
         private System.Windows.Forms.DateTimePicker dtpNgay;
         private System.Windows.Forms.ComboBox cbGioiTinh;
-        private System.Windows.Forms.ComboBox cbMaPhong;
+        private System.Windows.Forms.ComboBox cbPhong;
         private System.Windows.Forms.Label label6;
     }
 }

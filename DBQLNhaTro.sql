@@ -1,11 +1,11 @@
 
-/****** Object:  Database [DBQLNhaTro]    Script Date: 9/15/2021 00:16:17 ******/
-CREATE DATABASE [DBQLNhaTro]
+/****** Object:  Database [DBQLNhaTro]    Script Date: 9/15/2021 19:26:11 ******/
+CREATE DATABASE [DBQLNhaTro] 
 
 USE [DBQLNhaTro]
 GO
 
-/****** Object:  Table [dbo].[ChiPhi]    Script Date: 9/15/2021 00:16:17 ******/
+/****** Object:  Table [dbo].[ChiPhi]    Script Date: 9/15/2021 19:26:11 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -21,7 +21,7 @@ CREATE TABLE [dbo].[ChiPhi](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[HoaDon]    Script Date: 9/15/2021 00:16:17 ******/
+/****** Object:  Table [dbo].[HoaDon]    Script Date: 9/15/2021 19:26:12 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -33,13 +33,14 @@ CREATE TABLE [dbo].[HoaDon](
 	[TongTien] [decimal](18, 0) NULL,
 	[ThuePhongID] [int] NULL,
 	[ThangID] [int] NULL,
+	[NgayLap] [date] NULL,
  CONSTRAINT [PK_HoaDon] PRIMARY KEY CLUSTERED 
 (
 	[ID] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[KhachHang]    Script Date: 9/15/2021 00:16:17 ******/
+/****** Object:  Table [dbo].[KhachHang]    Script Date: 9/15/2021 19:26:12 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -52,13 +53,14 @@ CREATE TABLE [dbo].[KhachHang](
 	[NgaySinh] [date] NULL,
 	[QueQuan] [nvarchar](max) NULL,
 	[SDT] [nchar](10) NULL,
+	[TrangThaiThuePhong] [bit] NULL,
  CONSTRAINT [PK_KhachHang] PRIMARY KEY CLUSTERED 
 (
 	[ID] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[LoaiPhong]    Script Date: 9/15/2021 00:16:17 ******/
+/****** Object:  Table [dbo].[LoaiPhong]    Script Date: 9/15/2021 19:26:12 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -73,7 +75,7 @@ CREATE TABLE [dbo].[LoaiPhong](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Phong]    Script Date: 9/15/2021 00:16:17 ******/
+/****** Object:  Table [dbo].[Phong]    Script Date: 9/15/2021 19:26:12 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -83,13 +85,14 @@ CREATE TABLE [dbo].[Phong](
 	[SoPhong] [int] NULL,
 	[LoaiPhongID] [int] NULL,
 	[TrangThai] [bit] NULL,
+	[SoNguoiToiDa] [int] NULL,
  CONSTRAINT [PK_Phong] PRIMARY KEY CLUSTERED 
 (
 	[ID] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Thang]    Script Date: 9/15/2021 00:16:17 ******/
+/****** Object:  Table [dbo].[Thang]    Script Date: 9/15/2021 19:26:12 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -103,7 +106,7 @@ CREATE TABLE [dbo].[Thang](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[ThuePhong]    Script Date: 9/15/2021 00:16:17 ******/
+/****** Object:  Table [dbo].[ThuePhong]    Script Date: 9/15/2021 19:26:12 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -115,13 +118,14 @@ CREATE TABLE [dbo].[ThuePhong](
 	[NgayNhanCoc] [date] NULL,
 	[KhachHangID] [int] NULL,
 	[PhongID] [int] NULL,
+	[TrangThaiThanhToan] [bit] NULL,
  CONSTRAINT [PK_ThuePhong] PRIMARY KEY CLUSTERED 
 (
 	[ID] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[TraPhong]    Script Date: 9/15/2021 00:16:17 ******/
+/****** Object:  Table [dbo].[TraPhong]    Script Date: 9/15/2021 19:26:12 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -131,6 +135,7 @@ CREATE TABLE [dbo].[TraPhong](
 	[NgayTra] [date] NULL,
 	[ThuePhongID] [int] NULL,
 	[TraCoc] [bit] NULL,
+	[TrangThai] [bit] NULL,
  CONSTRAINT [PK_TraPhong] PRIMARY KEY CLUSTERED 
 (
 	[ID] ASC
@@ -163,7 +168,7 @@ SET IDENTITY_INSERT [dbo].[LoaiPhong] OFF
 GO
 SET IDENTITY_INSERT [dbo].[Phong] ON 
 GO
-INSERT [dbo].[Phong] ([ID], [SoPhong], [LoaiPhongID], [TrangThai]) VALUES (1, 203, 1, 0)
+INSERT [dbo].[Phong] ([ID], [SoPhong], [LoaiPhongID], [TrangThai], [SoNguoiToiDa]) VALUES (1, 203, 1, 0, NULL)
 GO
 SET IDENTITY_INSERT [dbo].[Phong] OFF
 GO

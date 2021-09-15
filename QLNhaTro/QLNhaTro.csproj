@@ -117,11 +117,11 @@
     <Compile Include="FTinhTien.Designer.cs">
       <DependentUpon>FTinhTien.cs</DependentUpon>
     </Compile>
-    <Compile Include="FTrangChu.cs">
+    <Compile Include="FPhong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FTrangChu.Designer.cs">
-      <DependentUpon>FTrangChu.cs</DependentUpon>
+    <Compile Include="FPhong.Designer.cs">
+      <DependentUpon>FPhong.cs</DependentUpon>
     </Compile>
     <Compile Include="FTraPhong.cs">
       <SubType>Form</SubType>
@@ -158,6 +158,9 @@
     <EmbeddedResource Include="FCapNhatPhong.resx">
       <DependentUpon>FCapNhatPhong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FLoaiPhong.resx">
+      <DependentUpon>FLoaiPhong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FMain.resx">
       <DependentUpon>FMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -170,8 +173,8 @@
     <EmbeddedResource Include="FTinhTien.resx">
       <DependentUpon>FTinhTien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FTrangChu.resx">
-      <DependentUpon>FTrangChu.cs</DependentUpon>
+    <EmbeddedResource Include="FPhong.resx">
+      <DependentUpon>FPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FTraPhong.resx">
       <DependentUpon>FTraPhong.cs</DependentUpon>
