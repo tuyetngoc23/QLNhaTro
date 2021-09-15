@@ -87,11 +87,11 @@
     <Compile Include="FCapNhatPhong.Designer.cs">
       <DependentUpon>FCapNhatPhong.cs</DependentUpon>
     </Compile>
-    <Compile Include="FDSKhachThue.cs">
+    <Compile Include="FLoaiPhong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FDSKhachThue.Designer.cs">
-      <DependentUpon>FDSKhachThue.cs</DependentUpon>
+    <Compile Include="FLoaiPhong.Designer.cs">
+      <DependentUpon>FLoaiPhong.cs</DependentUpon>
     </Compile>
     <Compile Include="FMain.cs">
       <SubType>Form</SubType>
@@ -99,17 +99,35 @@
     <Compile Include="FMain.Designer.cs">
       <DependentUpon>FMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FPhi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FPhi.Designer.cs">
+      <DependentUpon>FPhi.cs</DependentUpon>
+    </Compile>
     <Compile Include="FThuePhong.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FThuePhong.Designer.cs">
       <DependentUpon>FThuePhong.cs</DependentUpon>
     </Compile>
+    <Compile Include="FTinhTien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTinhTien.Designer.cs">
+      <DependentUpon>FTinhTien.cs</DependentUpon>
+    </Compile>
     <Compile Include="FTrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FTrangChu.Designer.cs">
       <DependentUpon>FTrangChu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FTraPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTraPhong.Designer.cs">
+      <DependentUpon>FTraPhong.cs</DependentUpon>
     </Compile>
     <Compile Include="HoaDon.cs">
       <DependentUpon>DBQLNhaTro.tt</DependentUpon>
@@ -140,17 +158,23 @@
     <EmbeddedResource Include="FCapNhatPhong.resx">
       <DependentUpon>FCapNhatPhong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FDSKhachThue.resx">
-      <DependentUpon>FDSKhachThue.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FMain.resx">
       <DependentUpon>FMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPhi.resx">
+      <DependentUpon>FPhi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FThuePhong.resx">
       <DependentUpon>FThuePhong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FTinhTien.resx">
+      <DependentUpon>FTinhTien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FTrangChu.resx">
       <DependentUpon>FTrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTraPhong.resx">
+      <DependentUpon>FTraPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
