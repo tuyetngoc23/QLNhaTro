@@ -66,7 +66,7 @@
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTop.Location = new System.Drawing.Point(0, 0);
             this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Size = new System.Drawing.Size(1558, 30);
+            this.pnlTop.Size = new System.Drawing.Size(1046, 30);
             this.pnlTop.TabIndex = 0;
             // 
             // pictureBox1
@@ -96,7 +96,7 @@
             this.ptbExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ptbExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ptbExit.Image = global::QLNhaTro.Properties.Resources._12;
-            this.ptbExit.Location = new System.Drawing.Point(1527, 6);
+            this.ptbExit.Location = new System.Drawing.Point(1015, 6);
             this.ptbExit.Name = "ptbExit";
             this.ptbExit.Size = new System.Drawing.Size(20, 20);
             this.ptbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -109,7 +109,7 @@
             this.ptbMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ptbMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ptbMinimize.Image = global::QLNhaTro.Properties.Resources.tải_xuống;
-            this.ptbMinimize.Location = new System.Drawing.Point(1456, 6);
+            this.ptbMinimize.Location = new System.Drawing.Point(944, 6);
             this.ptbMinimize.Name = "ptbMinimize";
             this.ptbMinimize.Size = new System.Drawing.Size(20, 20);
             this.ptbMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -122,7 +122,7 @@
             this.ptbState.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ptbState.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ptbState.Image = global::QLNhaTro.Properties.Resources.nut;
-            this.ptbState.Location = new System.Drawing.Point(1490, 6);
+            this.ptbState.Location = new System.Drawing.Point(978, 6);
             this.ptbState.Name = "ptbState";
             this.ptbState.Size = new System.Drawing.Size(20, 20);
             this.ptbState.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -136,31 +136,30 @@
             this.pnlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlLeft.Location = new System.Drawing.Point(0, 30);
             this.pnlLeft.Name = "pnlLeft";
-            this.pnlLeft.Size = new System.Drawing.Size(10, 863);
+            this.pnlLeft.Size = new System.Drawing.Size(10, 530);
             this.pnlLeft.TabIndex = 1;
             // 
             // pnlRight
             // 
             this.pnlRight.BackColor = System.Drawing.Color.LightSlateGray;
             this.pnlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlRight.Location = new System.Drawing.Point(1548, 30);
+            this.pnlRight.Location = new System.Drawing.Point(1036, 30);
             this.pnlRight.Name = "pnlRight";
-            this.pnlRight.Size = new System.Drawing.Size(10, 863);
+            this.pnlRight.Size = new System.Drawing.Size(10, 530);
             this.pnlRight.TabIndex = 1;
             // 
             // pnlBot
             // 
             this.pnlBot.BackColor = System.Drawing.Color.LightSlateGray;
             this.pnlBot.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlBot.Location = new System.Drawing.Point(0, 893);
+            this.pnlBot.Location = new System.Drawing.Point(0, 560);
             this.pnlBot.Name = "pnlBot";
-            this.pnlBot.Size = new System.Drawing.Size(1558, 10);
+            this.pnlBot.Size = new System.Drawing.Size(1046, 10);
             this.pnlBot.TabIndex = 1;
             // 
             // mnsMain
             // 
             this.mnsMain.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.mnsMain.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.mnsMain.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.mnsMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.trangChuToolStripMenuItem,
@@ -170,7 +169,7 @@
             this.thanhToanToolStripMenuItem});
             this.mnsMain.Location = new System.Drawing.Point(10, 30);
             this.mnsMain.Name = "mnsMain";
-            this.mnsMain.Size = new System.Drawing.Size(1538, 40);
+            this.mnsMain.Size = new System.Drawing.Size(1026, 40);
             this.mnsMain.TabIndex = 3;
             this.mnsMain.Text = "menuStrip1";
             // 
@@ -178,7 +177,7 @@
             // 
             this.trangChuToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.trangChuToolStripMenuItem.Name = "trangChuToolStripMenuItem";
-            this.trangChuToolStripMenuItem.Size = new System.Drawing.Size(140, 38);
+            this.trangChuToolStripMenuItem.Size = new System.Drawing.Size(140, 36);
             this.trangChuToolStripMenuItem.Text = "Trang chủ";
             // 
             // quanLyKHToolStripMenuItem
@@ -186,7 +185,7 @@
             this.quanLyKHToolStripMenuItem.BackColor = System.Drawing.Color.DarkSlateGray;
             this.quanLyKHToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.quanLyKHToolStripMenuItem.Name = "quanLyKHToolStripMenuItem";
-            this.quanLyKHToolStripMenuItem.Size = new System.Drawing.Size(249, 38);
+            this.quanLyKHToolStripMenuItem.Size = new System.Drawing.Size(249, 36);
             this.quanLyKHToolStripMenuItem.Text = "Quản lý khách hàng";
             // 
             // quanLyPhongToolStripMenuItem
@@ -198,7 +197,7 @@
             this.traPhongToolStripMenuItem});
             this.quanLyPhongToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.quanLyPhongToolStripMenuItem.Name = "quanLyPhongToolStripMenuItem";
-            this.quanLyPhongToolStripMenuItem.Size = new System.Drawing.Size(195, 38);
+            this.quanLyPhongToolStripMenuItem.Size = new System.Drawing.Size(195, 36);
             this.quanLyPhongToolStripMenuItem.Text = "Quản lý phòng";
             // 
             // loaiPhongToolStripMenuItem
@@ -230,7 +229,7 @@
             // 
             this.quanLyPhiToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.quanLyPhiToolStripMenuItem.Name = "quanLyPhiToolStripMenuItem";
-            this.quanLyPhiToolStripMenuItem.Size = new System.Drawing.Size(245, 38);
+            this.quanLyPhiToolStripMenuItem.Size = new System.Drawing.Size(245, 36);
             this.quanLyPhiToolStripMenuItem.Text = "Quản lý các loại phí";
             // 
             // thanhToanToolStripMenuItem
@@ -245,7 +244,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1558, 903);
+            this.ClientSize = new System.Drawing.Size(1046, 570);
             this.Controls.Add(this.mnsMain);
             this.Controls.Add(this.pnlRight);
             this.Controls.Add(this.pnlLeft);
