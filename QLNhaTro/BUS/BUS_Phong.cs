@@ -19,5 +19,26 @@ namespace QLNhaTro.BUS
         {
             dg.DataSource = dPhong.LayDSPTrong();
         }
+        public void LayDSPhong(DataGridView dg)
+        {
+            dg.DataSource = dPhong.LayDSPhong();
+        }
+        public void LayDSLoaiPhong(DataGridView dg)
+        {
+            dg.DataSource = dPhong.LayDSLoaiPhong();
+        }
+        public bool ThemLoaiPhong(LoaiPhong p)
+        {
+            try
+            {
+                dPhong.ThemLoaiPhong(p);
+                return true;
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
+        }
     }
 }
