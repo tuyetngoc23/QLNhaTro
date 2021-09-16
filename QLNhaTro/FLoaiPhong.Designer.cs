@@ -49,7 +49,7 @@
             this.label1.ForeColor = System.Drawing.Color.Red;
             this.label1.Location = new System.Drawing.Point(301, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(501, 46);
+            this.label1.Size = new System.Drawing.Size(378, 36);
             this.label1.TabIndex = 0;
             this.label1.Text = "CẬP NHẬT LOẠI PHÒNG";
             // 
@@ -63,13 +63,14 @@
             this.dgvLoai.RowTemplate.Height = 24;
             this.dgvLoai.Size = new System.Drawing.Size(892, 237);
             this.dgvLoai.TabIndex = 1;
+            this.dgvLoai.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLoai_CellContentClick);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(270, 82);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(200, 31);
+            this.label2.Size = new System.Drawing.Size(148, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "Tên loại phòng:";
             // 
@@ -77,14 +78,14 @@
             // 
             this.tbTen.Location = new System.Drawing.Point(414, 82);
             this.tbTen.Name = "tbTen";
-            this.tbTen.Size = new System.Drawing.Size(233, 38);
+            this.tbTen.Size = new System.Drawing.Size(233, 30);
             this.tbTen.TabIndex = 3;
             // 
             // tbGia
             // 
             this.tbGia.Location = new System.Drawing.Point(761, 79);
             this.tbGia.Name = "tbGia";
-            this.tbGia.Size = new System.Drawing.Size(101, 38);
+            this.tbGia.Size = new System.Drawing.Size(101, 30);
             this.tbGia.TabIndex = 5;
             // 
             // label3
@@ -92,7 +93,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(674, 82);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 31);
+            this.label3.Size = new System.Drawing.Size(84, 25);
             this.label3.TabIndex = 4;
             this.label3.Text = "Giá tiền:";
             // 
@@ -104,6 +105,7 @@
             this.btThem.TabIndex = 6;
             this.btThem.Text = "Thêm";
             this.btThem.UseVisualStyleBackColor = true;
+            this.btThem.Click += new System.EventHandler(this.btThem_Click);
             // 
             // btSua
             // 
@@ -130,7 +132,7 @@
             this.tbMa.Location = new System.Drawing.Point(122, 79);
             this.tbMa.Name = "tbMa";
             this.tbMa.ReadOnly = true;
-            this.tbMa.Size = new System.Drawing.Size(101, 38);
+            this.tbMa.Size = new System.Drawing.Size(101, 30);
             this.tbMa.TabIndex = 10;
             // 
             // label4
@@ -138,13 +140,13 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(29, 82);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(141, 31);
+            this.label4.Size = new System.Drawing.Size(106, 25);
             this.label4.TabIndex = 9;
             this.label4.Text = "Mã phòng:";
             // 
             // FLoaiPhong
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PowderBlue;
             this.ClientSize = new System.Drawing.Size(892, 428);
@@ -165,6 +167,7 @@
             this.Name = "FLoaiPhong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLoaiPhong";
+            this.Load += new System.EventHandler(this.FLoaiPhong_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoai)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

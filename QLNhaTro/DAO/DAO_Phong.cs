@@ -24,6 +24,7 @@ namespace QLNhaTro.DAO
                         }).ToList();
             return ds;
         }
+
         public dynamic LayDSPTheoPhongNho()
         {
             var ds = db.Phongs.Where(s => s.TrangThai == false && s.LoaiPhongID == 1)
@@ -57,14 +58,34 @@ namespace QLNhaTro.DAO
                 }).ToList();
             return ds;
         }
-        public dynamic LayDSLoaiPhong()
+        
+        public dynamic LayDSPhong()
         {
-            var ds = db.LoaiPhongs.Select(s => new {
-                                                s.ID,
-                                                 s.Ten
-                                         }).ToList();
+            var ds = db.Phongs.Select(s => new 
+                {
+                    s.ID,
+                    s.LoaiPhong.Ten,
+                    s.SoNguoiToiDa,
+                    s.SoPhong
+                }).ToList();
             return ds;
         }
-        
+
+        public dynamic LayDSLoaiPhong()
+        {
+            var ds = db.LoaiPhongs.Select(s => new
+            {
+                s.ID,
+                s.Ten,
+                s.Gia
+            }).ToList();
+            return ds;
+        }
+        public void ThemLoaiPhong(LoaiPhong p)
+        {
+            db.LoaiPhongs.Add(p);
+            db.SaveChanges();
+        }
+
     }
 }
