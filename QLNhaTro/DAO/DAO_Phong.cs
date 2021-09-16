@@ -23,7 +23,7 @@ namespace QLNhaTro.DAO
                         }).ToList();
             return ds;
         }
-<<<<<<< HEAD
+
         public dynamic LayDSPhong()
         {
             var ds = db.Phongs.Select(s => new 
@@ -46,13 +46,62 @@ namespace QLNhaTro.DAO
             }).ToList();
             return ds;
         }
-        public void ThemLoaiPhong(LoaiPhong p)
+        public void ThemLoaiPhong(LoaiPhong lp)
         {
-            db.LoaiPhongs.Add(p);
+            db.LoaiPhongs.Add(lp);
             db.SaveChanges();
         }
-=======
-        
->>>>>>> 85fe5bcbbedbdf72ea6d68a014bb35e10e1b1594
+        public bool KiemTraThemLP(LoaiPhong lp)
+        {
+            LoaiPhong loaiP = db.LoaiPhongs.Find(lp.ID);
+            if (loaiP != null)
+                return true;
+            else
+                return false;
+        }
+        public void SuaLoaiPhong(LoaiPhong lp)
+        {
+            LoaiPhong loaiP = db.LoaiPhongs.Find(lp.ID);
+            loaiP.ID = lp.ID;
+            loaiP.Ten = lp.Ten;
+            loaiP.Gia = lp.Gia;
+            db.SaveChanges();
+        }
+
+        public void XoaLoaiPhong(LoaiPhong lp)
+        {
+            LoaiPhong loaiP = db.LoaiPhongs.Find(lp.ID);
+            db.LoaiPhongs.Remove(loaiP);
+            db.SaveChanges();
+        }
+        public void ThemPhong(Phong p)
+        {
+            db.Phongs.Add(p);
+            db.SaveChanges();
+        }
+        public bool KiemTraThemP(Phong p)
+        {
+            Phong P = db.Phongs.Find(p.ID);
+            if (P != null)
+                return true;
+            else
+                return false;
+        }
+        public void SuaPhong(Phong p)
+        {
+            Phong P = db.Phongs.Find(p.ID);
+            P.ID = p.ID;
+            P.LoaiPhong.Ten = p.LoaiPhong.Ten;
+            P.SoNguoiToiDa = p.SoNguoiToiDa;
+            p.SoPhong = p.SoPhong;
+            db.SaveChanges();
+        }
+
+        public void XoaPhong(Phong p)
+        {
+            Phong P = db.Phongs.Find(p.ID);
+            db.Phongs.Remove(P);
+            db.SaveChanges();
+        }
     }
 }
