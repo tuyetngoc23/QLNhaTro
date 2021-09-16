@@ -19,8 +19,50 @@ namespace QLNhaTro.DAO
                 .Select(s => new { 
                             s.ID,
                             TenLoaiPhong = s.LoaiPhong.Ten,
-                            s.SoPhong
+                            s.SoPhong,
+                            s.SoNguoiToiDa
                         }).ToList();
+            return ds;
+        }
+        public dynamic LayDSPTheoPhongNho()
+        {
+            var ds = db.Phongs.Where(s => s.TrangThai == false && s.LoaiPhongID == 1)
+                .Select(s => new {
+                    s.ID,
+                    TenLoaiPhong = s.LoaiPhong.Ten,
+                    s.SoPhong,
+                    s.SoNguoiToiDa
+                }).ToList();
+            return ds;
+        }
+        public dynamic LayDSPTheoPhongVua()
+        {
+            var ds = db.Phongs.Where(s => s.TrangThai == false && s.LoaiPhongID == 2)
+                .Select(s => new {
+                    s.ID,
+                    TenLoaiPhong = s.LoaiPhong.Ten,
+                    s.SoPhong,
+                    s.SoNguoiToiDa
+                }).ToList();
+            return ds;
+        }
+        public dynamic LayDSPTheoPhongLon()
+        {
+            var ds = db.Phongs.Where(s => s.TrangThai == false && s.LoaiPhongID == 3)
+                .Select(s => new {
+                    s.ID,
+                    TenLoaiPhong = s.LoaiPhong.Ten,
+                    s.SoPhong,
+                    s.SoNguoiToiDa
+                }).ToList();
+            return ds;
+        }
+        public dynamic LayDSLoaiPhong()
+        {
+            var ds = db.LoaiPhongs.Select(s => new {
+                                                s.ID,
+                                                 s.Ten
+                                         }).ToList();
             return ds;
         }
         

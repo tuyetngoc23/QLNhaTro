@@ -19,6 +19,23 @@ namespace QLNhaTro.BUS
         {
             dg.DataSource = dPhong.LayDSPTrong();
         }
-        
+        public void LayDSPTheoPhongNho(DataGridView dg)
+        {
+            dg.DataSource = dPhong.LayDSPTheoPhongNho();
+        }
+        public void LayDSPTheoPhongVua(DataGridView dg)
+        {
+            dg.DataSource = dPhong.LayDSPTheoPhongVua();
+        }
+        public void LayDSPTheoPhongLon(DataGridView dg)
+        {
+            dg.DataSource = dPhong.LayDSPTheoPhongLon();
+        }
+        public void LayDSLoaiPhong(ComboBox cb)
+        {
+            cb.DataSource = dPhong.LayDSLoaiPhong();
+            cb.DisplayMember = "Ten";
+            cb.ValueMember = "ID";
+        }
     }
 }
