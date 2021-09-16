@@ -13,5 +13,19 @@ namespace QLNhaTro.DAO
         {
             db = new DBQLNhaTroEntities();
         }
+        public dynamic LayDSKH()
+        {
+            var ds = db.KhachHangs.Select(s => new { 
+                s.ID,
+                s.HoTen,
+                s.GioiTinh,
+                s.SDT,
+                s.CMND,
+                s.QueQuan,
+                s.TrangThaiThuePhong,
+                s.NgaySinh
+            }).ToList();
+            return ds;
+        }
     }
 }

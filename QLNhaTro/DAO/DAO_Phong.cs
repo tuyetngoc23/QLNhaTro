@@ -20,6 +20,7 @@ namespace QLNhaTro.DAO
                             s.ID,
                             TenLoaiPhong = s.LoaiPhong.Ten,
                             s.SoPhong,
+                            s.LoaiPhong.Gia,
                             s.SoNguoiToiDa
                         }).ToList();
             return ds;
@@ -32,6 +33,7 @@ namespace QLNhaTro.DAO
                     s.ID,
                     TenLoaiPhong = s.LoaiPhong.Ten,
                     s.SoPhong,
+                    s.LoaiPhong.Gia,
                     s.SoNguoiToiDa
                 }).ToList();
             return ds;
@@ -43,6 +45,7 @@ namespace QLNhaTro.DAO
                     s.ID,
                     TenLoaiPhong = s.LoaiPhong.Ten,
                     s.SoPhong,
+                    s.LoaiPhong.Gia,
                     s.SoNguoiToiDa
                 }).ToList();
             return ds;
@@ -54,6 +57,7 @@ namespace QLNhaTro.DAO
                     s.ID,
                     TenLoaiPhong = s.LoaiPhong.Ten,
                     s.SoPhong,
+                    s.LoaiPhong.Gia,
                     s.SoNguoiToiDa
                 }).ToList();
             return ds;
