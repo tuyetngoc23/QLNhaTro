@@ -20,6 +20,10 @@ namespace QLNhaTro.BUS
         {
             dg.DataSource = dKH.LayDSKH();
         }
+        public void LayDSKHTrong(DataGridView dg)
+        {
+            dg.DataSource = dKH.LayDSKHTrong();
+        }
         public void ThemKH(DataTable dtKhachHang)
         {
             try
@@ -52,6 +56,22 @@ namespace QLNhaTro.BUS
                 
                 MessageBox.Show(ex.Message);
             }
-}
+        }
+
+
+        public void ThuePhong(DataTable dtThuePhong)
+        {
+            foreach(DataRow item in dtThuePhong.Rows)
+            {
+                ThuePhong tp = new ThuePhong();
+                tp.TienCoc = decimal.Parse( item[0].ToString());
+                tp.NgayNhanCoc = DateTime.Parse( item[1].ToString());
+                tp.PhongID = int.Parse(item[2].ToString());
+                tp.KhachHangID = int.Parse(item[3].ToString());
+
+                dKH.ThuePhong(tp);
+            }
+        }
+
     }
 }

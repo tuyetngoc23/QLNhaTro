@@ -27,9 +27,29 @@ namespace QLNhaTro.DAO
             }).ToList();
             return ds;
         }
+        public dynamic LayDSKHTrong()
+        {
+            var ds = db.KhachHangs.Where(s => s.TrangThaiThuePhong == false)
+                                    .Select(s => new {
+                                        s.ID,
+                                        s.HoTen,
+                                        s.GioiTinh,
+                                        s.SDT,
+                                        s.CMND,
+                                        s.QueQuan,
+                                        s.TrangThaiThuePhong,
+                                        s.NgaySinh
+                                    }).ToList();
+            return ds;
+        }
         public void ThemKH(KhachHang kh)
         {
             db.sp_ThemKH(kh.HoTen, kh.CMND, kh.QueQuan, kh.GioiTinh, kh.NgaySinh, kh.SDT, kh.ID);
+            db.SaveChanges();
+        }
+        public void ThuePhong(ThuePhong tp)
+        {
+            db.sp_ThuePhong(tp.TienCoc, tp.NgayNhanCoc, tp.PhongID, tp.KhachHangID);
             db.SaveChanges();
         }
     }

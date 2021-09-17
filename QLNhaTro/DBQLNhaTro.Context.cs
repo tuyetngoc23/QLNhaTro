@@ -89,6 +89,5 @@ namespace QLNhaTro
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_ThuePhong", tienCocParameter, ngayNhanCocParameter, phongIDParameter, kHIDParameter);
         }
-
     }
 }

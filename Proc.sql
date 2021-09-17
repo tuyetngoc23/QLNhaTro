@@ -1,8 +1,8 @@
 AlTER PROC sp_ThuePhong @tienCoc decimal, @ngayNhanCoc date, @PhongID int, @KHID int
 AS
 BEGIN
-	insert into ThuePhong(TienCoc, NgayNhanCoc, PhongID, KhachHangID)
-	values (@tienCoc, @ngayNhanCoc, @PhongID, @KHID)
+	insert into ThuePhong(TienCoc, NgayNhanCoc, PhongID, KhachHangID, NgayThue)
+	values (@tienCoc, @ngayNhanCoc, @PhongID, @KHID, GETDATE())
 	update Phong
 	set TrangThai = 1
 	where ID = @PhongID
