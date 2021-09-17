@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
@@ -64,10 +65,10 @@
             this.label14 = new System.Windows.Forms.Label();
             this.dtpNgayThue = new System.Windows.Forms.DateTimePicker();
             this.btThue = new System.Windows.Forms.Button();
-            this.btXoa = new System.Windows.Forms.Button();
+            this.btClear = new System.Windows.Forms.Button();
             this.tbTienCoc = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.btSua = new System.Windows.Forms.Button();
+            this.btThemKH = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVPhong)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -103,6 +104,8 @@
             // 
             // dGVPhong
             // 
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.dGVPhong.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dGVPhong.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dGVPhong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -437,14 +440,15 @@
             this.btThue.UseVisualStyleBackColor = true;
             this.btThue.Click += new System.EventHandler(this.btThue_Click);
             // 
-            // btXoa
+            // btClear
             // 
-            this.btXoa.Location = new System.Drawing.Point(757, 388);
-            this.btXoa.Name = "btXoa";
-            this.btXoa.Size = new System.Drawing.Size(117, 37);
-            this.btXoa.TabIndex = 28;
-            this.btXoa.Text = "Xóa";
-            this.btXoa.UseVisualStyleBackColor = true;
+            this.btClear.Location = new System.Drawing.Point(757, 388);
+            this.btClear.Name = "btClear";
+            this.btClear.Size = new System.Drawing.Size(117, 37);
+            this.btClear.TabIndex = 28;
+            this.btClear.Text = "Clear";
+            this.btClear.UseVisualStyleBackColor = true;
+            this.btClear.Click += new System.EventHandler(this.btClear_Click);
             // 
             // tbTienCoc
             // 
@@ -463,14 +467,15 @@
             this.label15.TabIndex = 29;
             this.label15.Text = "Tiền coc:";
             // 
-            // btSua
+            // btThemKH
             // 
-            this.btSua.Location = new System.Drawing.Point(757, 303);
-            this.btSua.Name = "btSua";
-            this.btSua.Size = new System.Drawing.Size(117, 37);
-            this.btSua.TabIndex = 27;
-            this.btSua.Text = "Sửa";
-            this.btSua.UseVisualStyleBackColor = true;
+            this.btThemKH.Location = new System.Drawing.Point(757, 303);
+            this.btThemKH.Name = "btThemKH";
+            this.btThemKH.Size = new System.Drawing.Size(117, 37);
+            this.btThemKH.TabIndex = 27;
+            this.btThemKH.Text = "Thêm KH";
+            this.btThemKH.UseVisualStyleBackColor = true;
+            this.btThemKH.Click += new System.EventHandler(this.btThemKH_Click);
             // 
             // FThuePhong
             // 
@@ -480,8 +485,8 @@
             this.ClientSize = new System.Drawing.Size(896, 439);
             this.Controls.Add(this.tbTienCoc);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.btXoa);
-            this.Controls.Add(this.btSua);
+            this.Controls.Add(this.btClear);
+            this.Controls.Add(this.btThemKH);
             this.Controls.Add(this.btThue);
             this.Controls.Add(this.dtpNgayThue);
             this.Controls.Add(this.label14);
@@ -548,10 +553,10 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.DateTimePicker dtpNgayThue;
         private System.Windows.Forms.Button btThue;
-        private System.Windows.Forms.Button btXoa;
+        private System.Windows.Forms.Button btClear;
         private System.Windows.Forms.TextBox tbTienCoc;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.DataGridView dGVPhong;
-        private System.Windows.Forms.Button btSua;
+        private System.Windows.Forms.Button btThemKH;
     }
 }

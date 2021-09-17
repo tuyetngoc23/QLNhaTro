@@ -27,5 +27,10 @@ namespace QLNhaTro.DAO
             }).ToList();
             return ds;
         }
+        public void ThemKH(KhachHang kh)
+        {
+            db.sp_ThemKH(kh.HoTen, kh.CMND, kh.QueQuan, kh.GioiTinh, kh.NgaySinh, kh.SDT, kh.ID);
+            db.SaveChanges();
+        }
     }
 }

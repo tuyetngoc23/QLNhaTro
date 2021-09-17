@@ -15,6 +15,7 @@ namespace QLNhaTro
     {
         BUS_Phong bPhong;
         BUS_KhachHang bKhachHang;
+        DataTable dtKhachHang;
         public FThuePhong()
         {
             InitializeComponent();
@@ -92,6 +93,68 @@ namespace QLNhaTro
                 tbPhong.Text = dGVPhong.Rows[e.RowIndex].Cells["SoPhong"].Value.ToString();
                 tbTienPhong.Text = dGVPhong.Rows[e.RowIndex].Cells["Gia"].Value.ToString();
             }
+        }
+
+        private void btThemKH_Click(object sender, EventArgs e)
+        {
+            bool co = true;
+            DataRow r;
+
+            try
+            {
+                dtKhachHang = new DataTable();
+                dtKhachHang.Columns.Add("Ten");
+                dtKhachHang.Columns.Add("CMND");
+                dtKhachHang.Columns.Add("DiaChi");
+                dtKhachHang.Columns.Add("GioiTinh");
+                dtKhachHang.Columns.Add("NgaySinh");
+                dtKhachHang.Columns.Add("SDT");
+                dtKhachHang.Columns.Add("ID");
+
+                r = dtKhachHang.NewRow();
+                r[0] = tbTen.Text;
+                r[1] = tbCMND.Text;
+                r[2] = tbDiaChi.Text;
+                r[3] = tbGioiTinh.Text;
+                r[4] = dtpNgaySinh.Value.ToString();
+                r[5] = tbSdt.Text;
+                r[6] = tbMaKhach.Text;
+
+                for (int i = 0; i < 6; i++)
+                {
+                    if (r[i] == null || r[i].Equals(""))
+                    {
+                        co = false;
+                        break;
+                    }
+                }
+
+                if (co)
+                {
+                    dtKhachHang.Rows.Add(r);
+                    bKhachHang.ThemKH(dtKhachHang);
+                    MessageBox.Show("Them Thanh Cong");
+                    LayDSKH();
+                }
+                else
+                {
+                    throw new Exception("Vui lòng điền đầy đủ thông tin");
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Thêm thất bại");
+            }
+        }   
+
+        private void btClear_Click(object sender, EventArgs e)
+        {
+            tbTen.Text = null;
+            tbCMND.Text = null;
+            tbDiaChi.Text = null;
+            tbGioiTinh.Text = null;
+            tbSdt.Text = null;
+            tbMaKhach.Text = null;
         }
 
         private void btThue_Click(object sender, EventArgs e)

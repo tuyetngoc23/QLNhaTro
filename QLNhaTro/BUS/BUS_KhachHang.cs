@@ -1,6 +1,7 @@
 ﻿using QLNhaTro.DAO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,5 +20,38 @@ namespace QLNhaTro.BUS
         {
             dg.DataSource = dKH.LayDSKH();
         }
+        public void ThemKH(DataTable dtKhachHang)
+        {
+            try
+            {
+                foreach (DataRow item in dtKhachHang.Rows)
+                {
+                    KhachHang d = new KhachHang();
+                    d.HoTen = item[0].ToString();
+                    d.CMND = item[1].ToString();
+                    d.QueQuan = item[2].ToString();
+                    d.GioiTinh = item[3].ToString();
+                    d.NgaySinh = DateTime.Parse(item[4].ToString());
+                    d.SDT= item[5].ToString();
+
+                    if (item[6] == null || item[6].Equals(""))
+                    {
+                        d.ID = 0;
+                    }
+                    else
+                    {
+                        d.ID = int.Parse(item[6].ToString());
+                    }
+
+                    dKH.ThemKH(d);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                
+                MessageBox.Show(ex.Message);
+            }
+}
     }
 }
