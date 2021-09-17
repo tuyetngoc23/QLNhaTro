@@ -1,6 +1,7 @@
 ﻿using QLNhaTro.DAO;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -47,11 +48,64 @@ namespace QLNhaTro.BUS
         {
             dg.DataSource = dPhong.LayDSLoaiPhong();
         }
-        public bool ThemLoaiPhong(LoaiPhong p)
+        public bool ThemLoaiPhong(LoaiPhong lp)
         {
             try
             {
-                dPhong.ThemLoaiPhong(p);
+                dPhong.ThemLoaiPhong(lp);
+                return true;
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
+        }
+        public bool SuaLoaiPhong(LoaiPhong lp)
+        {
+            if (dPhong.KiemTraThemLP(lp))
+            {
+                try
+                {
+                    dPhong.SuaLoaiPhong(lp);
+                    return true;
+                }
+                catch (DbUpdateException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public bool XoaLoaiPhong(LoaiPhong lp)
+        {
+            if (dPhong.KiemTraThemLP(lp))
+            {
+                try
+                {
+                    dPhong.XoaLoaiPhong(lp);
+                    return true;
+                }
+                catch (DbUpdateException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public bool ThemPhong(Phong p)
+        {
+            try
+            {
+                dPhong.ThemPhong(p);
                 return true;
             }
             catch (Exception)
@@ -61,5 +115,45 @@ namespace QLNhaTro.BUS
             }
         }
 
+        public bool SuaPhong(Phong p)
+        {
+            if (dPhong.KiemTraThemP(p))
+            {
+                try
+                {
+                    dPhong.SuaPhong(p);
+                    return true;
+                }
+                catch (DbUpdateException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public bool XoaPhong(Phong p)
+        {
+            if (dPhong.KiemTraThemP(p))
+            {
+                try
+                {
+                    dPhong.XoaPhong(p);
+                    return true;
+                }
+                catch (DbUpdateException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

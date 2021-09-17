@@ -63,7 +63,7 @@
             this.dgvLoai.RowTemplate.Height = 24;
             this.dgvLoai.Size = new System.Drawing.Size(892, 237);
             this.dgvLoai.TabIndex = 1;
-            this.dgvLoai.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLoai_CellContentClick);
+            this.dgvLoai.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLoai_CellClick);
             // 
             // label2
             // 
@@ -115,6 +115,7 @@
             this.btSua.TabIndex = 7;
             this.btSua.Text = "Sửa";
             this.btSua.UseVisualStyleBackColor = true;
+            this.btSua.Click += new System.EventHandler(this.btSua_Click);
             // 
             // btXoa
             // 
@@ -124,6 +125,7 @@
             this.btXoa.TabIndex = 8;
             this.btXoa.Text = "Xóa";
             this.btXoa.UseVisualStyleBackColor = true;
+            this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
             // 
             // tbMa
             // 

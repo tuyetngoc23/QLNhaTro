@@ -29,24 +29,77 @@ namespace QLNhaTro
             dgvLoai.Columns[2].Width = (int)(dgvLoai.Width * 0.375);
             
         }
-        private void dgvLoai_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
 
         private void FLoaiPhong_Load(object sender, EventArgs e)
         {
             HienThiDSLoaiPhong();
+            
         }
 
         private void btThem_Click(object sender, EventArgs e)
         {
-            //Gọi form loại phòng
-            FLoaiPhong f = new FLoaiPhong();
-            //Truyền mã đơn qua form
-            f.maLoaiPhong = this.maLoaiPhong;
+            LoaiPhong lp = new LoaiPhong();
+            lp.Gia = int.Parse(tbGia.Text);
+            lp.Ten = tbTen.Text;
+            
+            if (busP.ThemLoaiPhong(lp))
+            {
+                MessageBox.Show("Them loai phong thành công");
+                busP.LayDSLoaiPhong(dgvLoai);
+                HienThiDSLoaiPhong();
+            }
+            else
+            {
+                MessageBox.Show("Them loai phong thất bại");
+            }
 
-            //f.ShowDialog();
+        }
+
+        private void dgvLoai_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.RowIndex < dgvLoai.Rows.Count)
+            {
+                tbMa.Text = dgvLoai.Rows[e.RowIndex].Cells[0].Value.ToString();
+                tbTen.Text = dgvLoai.Rows[e.RowIndex].Cells[1].Value.ToString();
+                tbGia.Text = dgvLoai.Rows[e.RowIndex].Cells[2].Value.ToString();
+            }
+        }
+
+        private void btSua_Click(object sender, EventArgs e)
+        {
+            LoaiPhong lp = new LoaiPhong();
+            lp.ID = int.Parse(tbMa.Text);
+            lp.Ten = tbTen.Text;
+            lp.Gia = int.Parse(tbGia.Text);
+            //Gọi sự kiện sửa của BUS
+            if (busP.SuaLoaiPhong(lp))
+            {
+                MessageBox.Show("Sửa loai phong thành công");
+                busP.LayDSLoaiPhong(dgvLoai);
+                HienThiDSLoaiPhong();
+            }
+            else
+            {
+                MessageBox.Show("Sửa loai phong thất bại");
+            }
+        }
+
+        private void btXoa_Click(object sender, EventArgs e)
+        {
+            LoaiPhong lp = new LoaiPhong();
+            lp.ID = int.Parse(tbMa.Text);
+
+            //Gọi sự kiện xóa của BUS
+            if (busP.XoaLoaiPhong(lp))
+            {
+                MessageBox.Show("Xóa loai phong thành công");
+                busP.LayDSLoaiPhong(dgvLoai);
+                HienThiDSLoaiPhong();
+            }
+            else
+            {
+                MessageBox.Show("Xóa loai phong thất bại");
+            }
         }
     }
 }

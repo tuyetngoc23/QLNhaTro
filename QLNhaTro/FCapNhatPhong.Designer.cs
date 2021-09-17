@@ -51,7 +51,7 @@
             this.label1.ForeColor = System.Drawing.Color.Red;
             this.label1.Location = new System.Drawing.Point(343, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(381, 46);
+            this.label1.Size = new System.Drawing.Size(283, 36);
             this.label1.TabIndex = 0;
             this.label1.Text = "CẬP NHẬT PHÒNG";
             // 
@@ -65,13 +65,14 @@
             this.dgvPhong.RowTemplate.Height = 24;
             this.dgvPhong.Size = new System.Drawing.Size(959, 201);
             this.dgvPhong.TabIndex = 1;
+            this.dgvPhong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhong_CellClick);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(48, 72);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(141, 31);
+            this.label2.Size = new System.Drawing.Size(106, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "Mã phòng:";
             // 
@@ -80,14 +81,14 @@
             this.tbMa.BackColor = System.Drawing.Color.White;
             this.tbMa.Location = new System.Drawing.Point(183, 69);
             this.tbMa.Name = "tbMa";
-            this.tbMa.Size = new System.Drawing.Size(215, 38);
+            this.tbMa.Size = new System.Drawing.Size(215, 30);
             this.tbMa.TabIndex = 3;
             // 
             // tbPhong
             // 
             this.tbPhong.Location = new System.Drawing.Point(183, 104);
             this.tbPhong.Name = "tbPhong";
-            this.tbPhong.Size = new System.Drawing.Size(215, 38);
+            this.tbPhong.Size = new System.Drawing.Size(215, 30);
             this.tbPhong.TabIndex = 5;
             // 
             // label3
@@ -95,7 +96,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(48, 107);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(137, 31);
+            this.label3.Size = new System.Drawing.Size(103, 25);
             this.label3.TabIndex = 4;
             this.label3.Text = "Số phòng:";
             // 
@@ -104,7 +105,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(489, 107);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(155, 31);
+            this.label4.Size = new System.Drawing.Size(115, 25);
             this.label4.TabIndex = 6;
             this.label4.Text = "Loại phòng:";
             // 
@@ -112,7 +113,7 @@
             // 
             this.tbToiDa.Location = new System.Drawing.Point(648, 68);
             this.tbToiDa.Name = "tbToiDa";
-            this.tbToiDa.Size = new System.Drawing.Size(215, 38);
+            this.tbToiDa.Size = new System.Drawing.Size(215, 30);
             this.tbToiDa.TabIndex = 13;
             // 
             // label8
@@ -120,7 +121,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(489, 72);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(201, 31);
+            this.label8.Size = new System.Drawing.Size(148, 25);
             this.label8.TabIndex = 12;
             this.label8.Text = "Số người tối đa:";
             // 
@@ -132,6 +133,7 @@
             this.btThem.TabIndex = 16;
             this.btThem.Text = "Thêm";
             this.btThem.UseVisualStyleBackColor = true;
+            this.btThem.Click += new System.EventHandler(this.btThem_Click);
             // 
             // btSua
             // 
@@ -141,6 +143,7 @@
             this.btSua.TabIndex = 17;
             this.btSua.Text = "Sửa";
             this.btSua.UseVisualStyleBackColor = true;
+            this.btSua.Click += new System.EventHandler(this.btSua_Click);
             // 
             // btXoa
             // 
@@ -150,6 +153,7 @@
             this.btXoa.TabIndex = 18;
             this.btXoa.Text = "Xóa";
             this.btXoa.UseVisualStyleBackColor = true;
+            this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
             // 
             // cbLoai
             // 
@@ -157,12 +161,12 @@
             this.cbLoai.FormattingEnabled = true;
             this.cbLoai.Location = new System.Drawing.Point(648, 106);
             this.cbLoai.Name = "cbLoai";
-            this.cbLoai.Size = new System.Drawing.Size(215, 39);
+            this.cbLoai.Size = new System.Drawing.Size(215, 33);
             this.cbLoai.TabIndex = 19;
             // 
             // FCapNhatPhong
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PowderBlue;
             this.ClientSize = new System.Drawing.Size(959, 440);
