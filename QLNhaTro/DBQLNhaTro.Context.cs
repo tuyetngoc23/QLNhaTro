@@ -89,5 +89,22 @@ namespace QLNhaTro
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_ThuePhong", tienCocParameter, ngayNhanCocParameter, phongIDParameter, kHIDParameter);
         }
+    
+        public virtual int sp_TraPhong(Nullable<int> phongID, Nullable<int> kHID, Nullable<int> thuePhongID)
+        {
+            var phongIDParameter = phongID.HasValue ?
+                new ObjectParameter("PhongID", phongID) :
+                new ObjectParameter("PhongID", typeof(int));
+    
+            var kHIDParameter = kHID.HasValue ?
+                new ObjectParameter("KHID", kHID) :
+                new ObjectParameter("KHID", typeof(int));
+    
+            var thuePhongIDParameter = thuePhongID.HasValue ?
+                new ObjectParameter("ThuePhongID", thuePhongID) :
+                new ObjectParameter("ThuePhongID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_TraPhong", phongIDParameter, kHIDParameter, thuePhongIDParameter);
+        }
     }
 }

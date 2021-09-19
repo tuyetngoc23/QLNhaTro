@@ -29,7 +29,6 @@ namespace QLNhaTro
             dGVPhong.Columns[1].Width = (int)(dGVPhong.Width * 0.4);
             dGVPhong.Columns[2].Width = (int)(dGVPhong.Width * 0.27);
             dGVPhong.Columns[3].Width = (int)(dGVPhong.Width * 0.35);
-            dGVPhong.Columns[4].Width = (int)(dGVPhong.Width * 0.35);
         }
         public void LayDSKHTrong()
         {
@@ -122,7 +121,7 @@ namespace QLNhaTro
                 r[5] = tbSdt.Text;
                 r[6] = tbMaKhach.Text;
 
-                for (int i = 0; i < 7; i++)
+                for (int i = 0; i < 6; i++)
                 {
                     if (r[i] == null || r[i].Equals(""))
                     {
@@ -147,7 +146,7 @@ namespace QLNhaTro
             {
                 MessageBox.Show("Thêm thất bại");
             }
-        }   
+}   
 
         private void btClear_Click(object sender, EventArgs e)
         {

@@ -51,7 +51,6 @@ namespace QLNhaTro
             Phong p = new Phong();
             p.ID = int.Parse(tbMa.Text);
             p.SoPhong = int.Parse(tbPhong.Text);
-            p.SoNguoiToiDa = int.Parse(tbToiDa.Text);
             //lp.ID = int.Parse(tbMa.Text);
             if (busP.ThemPhong(p))
             {
@@ -70,7 +69,6 @@ namespace QLNhaTro
             Phong p = new Phong();
             p.ID = int.Parse(tbMa.Text);
             p.SoPhong = int.Parse(tbPhong.Text);
-            p.SoNguoiToiDa = int.Parse(tbToiDa.Text);
             p.ID = int.Parse(tbMa.Text);
             if (busP.SuaPhong(p))
             {

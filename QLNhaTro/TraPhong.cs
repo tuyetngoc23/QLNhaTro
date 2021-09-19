@@ -18,7 +18,6 @@ namespace QLNhaTro
         public Nullable<System.DateTime> NgayTra { get; set; }
         public Nullable<int> ThuePhongID { get; set; }
         public Nullable<bool> TraCoc { get; set; }
-        public Nullable<bool> TrangThai { get; set; }
     
         public virtual ThuePhong ThuePhong { get; set; }
     }

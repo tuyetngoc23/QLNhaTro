@@ -20,8 +20,7 @@ namespace QLNhaTro.DAO
                             s.ID,
                             TenLoaiPhong = s.LoaiPhong.Ten,
                             s.SoPhong,
-                            s.LoaiPhong.Gia,
-                            s.SoNguoiToiDa
+                            s.LoaiPhong.Gia
                         }).ToList();
             return ds;
         }
@@ -33,8 +32,7 @@ namespace QLNhaTro.DAO
                     s.ID,
                     TenLoaiPhong = s.LoaiPhong.Ten,
                     s.SoPhong,
-                    s.LoaiPhong.Gia,
-                    s.SoNguoiToiDa
+                    s.LoaiPhong.Gia
                 }).ToList();
             return ds;
         }
@@ -46,7 +44,6 @@ namespace QLNhaTro.DAO
                     TenLoaiPhong = s.LoaiPhong.Ten,
                     s.SoPhong,
                     s.LoaiPhong.Gia,
-                    s.SoNguoiToiDa
                 }).ToList();
             return ds;
         }
@@ -58,7 +55,6 @@ namespace QLNhaTro.DAO
                     TenLoaiPhong = s.LoaiPhong.Ten,
                     s.SoPhong,
                     s.LoaiPhong.Gia,
-                    s.SoNguoiToiDa
                 }).ToList();
             return ds;
         }
@@ -69,7 +65,6 @@ namespace QLNhaTro.DAO
                 {
                     s.ID,
                     s.LoaiPhong.Ten,
-                    s.SoNguoiToiDa,
                     s.SoPhong
                 }).ToList();
             return ds;
@@ -131,7 +126,6 @@ namespace QLNhaTro.DAO
             Phong P = db.Phongs.Find(p.ID);
             P.ID = p.ID;
             P.LoaiPhong.Ten = p.LoaiPhong.Ten;
-            P.SoNguoiToiDa = p.SoNguoiToiDa;
             p.SoPhong = p.SoPhong;
             db.SaveChanges();
         }
