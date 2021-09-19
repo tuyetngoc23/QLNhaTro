@@ -33,7 +33,5 @@ namespace QLNhaTro
         public virtual DbSet<Thang> Thangs { get; set; }
         public virtual DbSet<ThuePhong> ThuePhongs { get; set; }
         public virtual DbSet<TraPhong> TraPhongs { get; set; }
-
-        
     }
 }

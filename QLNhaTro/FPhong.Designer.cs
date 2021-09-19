@@ -29,12 +29,23 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtDichVu = new System.Windows.Forms.TextBox();
+            this.txtWifi = new System.Windows.Forms.TextBox();
+            this.txtRac = new System.Windows.Forms.TextBox();
+            this.txtDien = new System.Windows.Forms.TextBox();
+            this.txtNuoc = new System.Windows.Forms.TextBox();
+            this.txtPhongNho = new System.Windows.Forms.TextBox();
+            this.txtPhongLon = new System.Windows.Forms.TextBox();
+            this.txtPhongVua = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -50,20 +61,8 @@
             this.label17 = new System.Windows.Forms.Label();
             this.cbLoai = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.imgIcon = new System.Windows.Forms.ImageList(this.components);
             this.dGVPhong = new System.Windows.Forms.DataGridView();
-            this.txtPhongNho = new System.Windows.Forms.TextBox();
-            this.txtPhongVua = new System.Windows.Forms.TextBox();
-            this.txtPhongLon = new System.Windows.Forms.TextBox();
-            this.txtNuoc = new System.Windows.Forms.TextBox();
-            this.txtRac = new System.Windows.Forms.TextBox();
-            this.txtDien = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.txtWifi = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.txtDichVu = new System.Windows.Forms.TextBox();
+            this.imgIcon = new System.Windows.Forms.ImageList(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVPhong)).BeginInit();
@@ -105,6 +104,78 @@
             this.panel1.Size = new System.Drawing.Size(329, 422);
             this.panel1.TabIndex = 0;
             // 
+            // txtDichVu
+            // 
+            this.txtDichVu.Enabled = false;
+            this.txtDichVu.Location = new System.Drawing.Point(159, 356);
+            this.txtDichVu.Name = "txtDichVu";
+            this.txtDichVu.Size = new System.Drawing.Size(99, 38);
+            this.txtDichVu.TabIndex = 27;
+            this.txtDichVu.Text = "20,000";
+            // 
+            // txtWifi
+            // 
+            this.txtWifi.Enabled = false;
+            this.txtWifi.Location = new System.Drawing.Point(159, 325);
+            this.txtWifi.Name = "txtWifi";
+            this.txtWifi.Size = new System.Drawing.Size(99, 38);
+            this.txtWifi.TabIndex = 27;
+            this.txtWifi.Text = "80,000";
+            // 
+            // txtRac
+            // 
+            this.txtRac.Enabled = false;
+            this.txtRac.Location = new System.Drawing.Point(159, 294);
+            this.txtRac.Name = "txtRac";
+            this.txtRac.Size = new System.Drawing.Size(99, 38);
+            this.txtRac.TabIndex = 27;
+            this.txtRac.Text = "20,000";
+            // 
+            // txtDien
+            // 
+            this.txtDien.Enabled = false;
+            this.txtDien.Location = new System.Drawing.Point(159, 228);
+            this.txtDien.Name = "txtDien";
+            this.txtDien.Size = new System.Drawing.Size(99, 38);
+            this.txtDien.TabIndex = 27;
+            this.txtDien.Text = "3,500";
+            // 
+            // txtNuoc
+            // 
+            this.txtNuoc.Enabled = false;
+            this.txtNuoc.Location = new System.Drawing.Point(159, 262);
+            this.txtNuoc.Name = "txtNuoc";
+            this.txtNuoc.Size = new System.Drawing.Size(99, 38);
+            this.txtNuoc.TabIndex = 27;
+            this.txtNuoc.Text = "7,000";
+            // 
+            // txtPhongNho
+            // 
+            this.txtPhongNho.Enabled = false;
+            this.txtPhongNho.Location = new System.Drawing.Point(159, 83);
+            this.txtPhongNho.Name = "txtPhongNho";
+            this.txtPhongNho.Size = new System.Drawing.Size(99, 38);
+            this.txtPhongNho.TabIndex = 27;
+            this.txtPhongNho.Text = "1,500,000";
+            // 
+            // txtPhongLon
+            // 
+            this.txtPhongLon.Enabled = false;
+            this.txtPhongLon.Location = new System.Drawing.Point(159, 149);
+            this.txtPhongLon.Name = "txtPhongLon";
+            this.txtPhongLon.Size = new System.Drawing.Size(99, 38);
+            this.txtPhongLon.TabIndex = 27;
+            this.txtPhongLon.Text = "2,500,000";
+            // 
+            // txtPhongVua
+            // 
+            this.txtPhongVua.Enabled = false;
+            this.txtPhongVua.Location = new System.Drawing.Point(159, 117);
+            this.txtPhongVua.Name = "txtPhongVua";
+            this.txtPhongVua.Size = new System.Drawing.Size(99, 38);
+            this.txtPhongVua.TabIndex = 27;
+            this.txtPhongVua.Text = "2,000,000";
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -113,6 +184,24 @@
             this.label10.Size = new System.Drawing.Size(74, 31);
             this.label10.TabIndex = 20;
             this.label10.Text = "đ/m3";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(268, 359);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(100, 31);
+            this.label21.TabIndex = 19;
+            this.label21.Text = "/Phòng";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(268, 328);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(100, 31);
+            this.label19.TabIndex = 19;
+            this.label19.Text = "/Phòng";
             // 
             // label11
             // 
@@ -140,6 +229,24 @@
             this.label13.Size = new System.Drawing.Size(130, 31);
             this.label13.TabIndex = 14;
             this.label13.Text = "Giá nước:";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(22, 359);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(154, 31);
+            this.label20.TabIndex = 13;
+            this.label20.Text = "Phí dịch vụ:";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(22, 328);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(113, 31);
+            this.label18.TabIndex = 13;
+            this.label18.Text = "Phí Wifi:";
             // 
             // label14
             // 
@@ -277,6 +384,7 @@
             this.cbLoai.Name = "cbLoai";
             this.cbLoai.Size = new System.Drawing.Size(121, 39);
             this.cbLoai.TabIndex = 3;
+            this.cbLoai.SelectedIndexChanged += new System.EventHandler(this.cbLoai_SelectedIndexChanged);
             // 
             // panel2
             // 
@@ -288,17 +396,8 @@
             this.panel2.Size = new System.Drawing.Size(242, 37);
             this.panel2.TabIndex = 5;
             // 
-            // imgIcon
-            // 
-            this.imgIcon.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imgIcon.ImageSize = new System.Drawing.Size(16, 16);
-            this.imgIcon.TransparentColor = System.Drawing.Color.Transparent;
-            // 
             // dGVPhong
             // 
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            this.dGVPhong.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dGVPhong.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dGVPhong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGVPhong.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dGVPhong.Location = new System.Drawing.Point(329, 108);
@@ -309,108 +408,11 @@
             this.dGVPhong.TabIndex = 7;
             this.dGVPhong.DoubleClick += new System.EventHandler(this.dGVPhong_DoubleClick);
             // 
-            // txtPhongNho
+            // imgIcon
             // 
-            this.txtPhongNho.Enabled = false;
-            this.txtPhongNho.Location = new System.Drawing.Point(159, 83);
-            this.txtPhongNho.Name = "txtPhongNho";
-            this.txtPhongNho.Size = new System.Drawing.Size(99, 38);
-            this.txtPhongNho.TabIndex = 27;
-            this.txtPhongNho.Text = "0";
-            // 
-            // txtPhongVua
-            // 
-            this.txtPhongVua.Enabled = false;
-            this.txtPhongVua.Location = new System.Drawing.Point(159, 117);
-            this.txtPhongVua.Name = "txtPhongVua";
-            this.txtPhongVua.Size = new System.Drawing.Size(99, 38);
-            this.txtPhongVua.TabIndex = 27;
-            this.txtPhongVua.Text = "0";
-            // 
-            // txtPhongLon
-            // 
-            this.txtPhongLon.Enabled = false;
-            this.txtPhongLon.Location = new System.Drawing.Point(159, 149);
-            this.txtPhongLon.Name = "txtPhongLon";
-            this.txtPhongLon.Size = new System.Drawing.Size(99, 38);
-            this.txtPhongLon.TabIndex = 27;
-            this.txtPhongLon.Text = "0";
-            // 
-            // txtNuoc
-            // 
-            this.txtNuoc.Enabled = false;
-            this.txtNuoc.Location = new System.Drawing.Point(159, 262);
-            this.txtNuoc.Name = "txtNuoc";
-            this.txtNuoc.Size = new System.Drawing.Size(99, 38);
-            this.txtNuoc.TabIndex = 27;
-            // 
-            // txtRac
-            // 
-            this.txtRac.Enabled = false;
-            this.txtRac.Location = new System.Drawing.Point(159, 294);
-            this.txtRac.Name = "txtRac";
-            this.txtRac.Size = new System.Drawing.Size(99, 38);
-            this.txtRac.TabIndex = 27;
-            // 
-            // txtDien
-            // 
-            this.txtDien.Enabled = false;
-            this.txtDien.Location = new System.Drawing.Point(159, 228);
-            this.txtDien.Name = "txtDien";
-            this.txtDien.Size = new System.Drawing.Size(99, 38);
-            this.txtDien.TabIndex = 27;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(22, 328);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(113, 31);
-            this.label18.TabIndex = 13;
-            this.label18.Text = "Phí Wifi:";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(268, 328);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(100, 31);
-            this.label19.TabIndex = 19;
-            this.label19.Text = "/Phòng";
-            // 
-            // txtWifi
-            // 
-            this.txtWifi.Enabled = false;
-            this.txtWifi.Location = new System.Drawing.Point(159, 325);
-            this.txtWifi.Name = "txtWifi";
-            this.txtWifi.Size = new System.Drawing.Size(99, 38);
-            this.txtWifi.TabIndex = 27;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(22, 359);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(154, 31);
-            this.label20.TabIndex = 13;
-            this.label20.Text = "Phí dịch vụ:";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(268, 359);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(100, 31);
-            this.label21.TabIndex = 19;
-            this.label21.Text = "/Phòng";
-            // 
-            // txtDichVu
-            // 
-            this.txtDichVu.Enabled = false;
-            this.txtDichVu.Location = new System.Drawing.Point(159, 356);
-            this.txtDichVu.Name = "txtDichVu";
-            this.txtDichVu.Size = new System.Drawing.Size(99, 38);
-            this.txtDichVu.TabIndex = 27;
+            this.imgIcon.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imgIcon.ImageSize = new System.Drawing.Size(16, 16);
+            this.imgIcon.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // FPhong
             // 
@@ -460,7 +462,6 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.ComboBox cbLoai;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ImageList imgIcon;
         private System.Windows.Forms.DataGridView dGVPhong;
         private System.Windows.Forms.TextBox txtRac;
         private System.Windows.Forms.TextBox txtDien;
@@ -474,5 +475,6 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.ImageList imgIcon;
     }
 }

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace QLNhaTro.BUS
 {
@@ -13,6 +14,10 @@ namespace QLNhaTro.BUS
         public BUS_KhachHang()
         {
             dKH = new DAO_KhachHang();
+        }
+        public void LayDSKH(DataGridView dg)
+        {
+            dg.DataSource = dKH.LayDSKH();
         }
     }
 }

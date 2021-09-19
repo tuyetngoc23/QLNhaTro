@@ -1,0 +1,2 @@
+/* Form Phong */
+- Hiển thị toàn bộ danh sách phòng khi load form Phong lên(chỉ hiện thị được từng loại phòng)

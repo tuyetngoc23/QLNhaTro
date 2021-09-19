@@ -19,10 +19,51 @@ namespace QLNhaTro.DAO
                 .Select(s => new { 
                             s.ID,
                             TenLoaiPhong = s.LoaiPhong.Ten,
-                            s.SoPhong
+                            s.SoPhong,
+                            s.LoaiPhong.Gia,
+                            s.SoNguoiToiDa
                         }).ToList();
             return ds;
         }
+
+
+        public dynamic LayDSPTheoPhongNho()
+        {
+            var ds = db.Phongs.Where(s => s.TrangThai == false && s.LoaiPhongID == 1)
+                .Select(s => new {
+                    s.ID,
+                    TenLoaiPhong = s.LoaiPhong.Ten,
+                    s.SoPhong,
+                    s.LoaiPhong.Gia,
+                    s.SoNguoiToiDa
+                }).ToList();
+            return ds;
+        }
+        public dynamic LayDSPTheoPhongVua()
+        {
+            var ds = db.Phongs.Where(s => s.TrangThai == false && s.LoaiPhongID == 2)
+                .Select(s => new {
+                    s.ID,
+                    TenLoaiPhong = s.LoaiPhong.Ten,
+                    s.SoPhong,
+                    s.LoaiPhong.Gia,
+                    s.SoNguoiToiDa
+                }).ToList();
+            return ds;
+        }
+        public dynamic LayDSPTheoPhongLon()
+        {
+            var ds = db.Phongs.Where(s => s.TrangThai == false && s.LoaiPhongID == 3)
+                .Select(s => new {
+                    s.ID,
+                    TenLoaiPhong = s.LoaiPhong.Ten,
+                    s.SoPhong,
+                    s.LoaiPhong.Gia,
+                    s.SoNguoiToiDa
+                }).ToList();
+            return ds;
+        }
+        
 
         public dynamic LayDSPhong()
         {
@@ -103,5 +144,6 @@ namespace QLNhaTro.DAO
             db.Phongs.Remove(P);
             db.SaveChanges();
         }
+
     }
 }
