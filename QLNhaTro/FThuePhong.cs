@@ -15,6 +15,8 @@ namespace QLNhaTro
     {
         BUS_Phong bPhong;
         BUS_KhachHang bKhachHang;
+        DataTable dtKhachHang;
+        DataTable dtThuePhong;
         public FThuePhong()
         {
             InitializeComponent();
@@ -27,11 +29,10 @@ namespace QLNhaTro
             dGVPhong.Columns[1].Width = (int)(dGVPhong.Width * 0.4);
             dGVPhong.Columns[2].Width = (int)(dGVPhong.Width * 0.27);
             dGVPhong.Columns[3].Width = (int)(dGVPhong.Width * 0.35);
-            dGVPhong.Columns[4].Width = (int)(dGVPhong.Width * 0.35);
         }
-        public void LayDSKH()
+        public void LayDSKHTrong()
         {
-            bKhachHang.LayDSKH(dGVKhachHang);
+            bKhachHang.LayDSKHTrong(dGVKhachHang);
 
             dGVKhachHang.Columns[0].Width = (int)(dGVKhachHang.Width * 0.11);
             dGVKhachHang.Columns[1].Width = (int)(dGVKhachHang.Width * 0.35);
@@ -42,6 +43,7 @@ namespace QLNhaTro
             dGVKhachHang.Columns[6].Width = (int)(dGVKhachHang.Width * 0.35);
             dGVKhachHang.Columns[7].Width = (int)(dGVKhachHang.Width * 0.35);
         }
+
         public void LayDSPTrong()
         {
             bPhong.LayDSPTrong(dGVPhong);
@@ -49,7 +51,7 @@ namespace QLNhaTro
         }
         private void FThuePhong_Load(object sender, EventArgs e)
         {
-            LayDSKH();
+            LayDSKHTrong();
             LayDSPTrong();
             bPhong.LayDSLoaiPhong(cbLoaiPhong);
         }
@@ -94,9 +96,113 @@ namespace QLNhaTro
             }
         }
 
+        private void btThemKH_Click(object sender, EventArgs e)
+        {
+            bool co = true;
+            DataRow r;
+
+            try
+            {
+                dtKhachHang = new DataTable();
+                dtKhachHang.Columns.Add("Ten");
+                dtKhachHang.Columns.Add("CMND");
+                dtKhachHang.Columns.Add("DiaChi");
+                dtKhachHang.Columns.Add("GioiTinh");
+                dtKhachHang.Columns.Add("NgaySinh");
+                dtKhachHang.Columns.Add("SDT");
+                dtKhachHang.Columns.Add("ID");
+
+                r = dtKhachHang.NewRow();
+                r[0] = tbTen.Text;
+                r[1] = tbCMND.Text;
+                r[2] = tbDiaChi.Text;
+                r[3] = tbGioiTinh.Text;
+                r[4] = dtpNgaySinh.Value.ToString();
+                r[5] = tbSdt.Text;
+                r[6] = tbMaKhach.Text;
+
+                for (int i = 0; i < 6; i++)
+                {
+                    if (r[i] == null || r[i].Equals(""))
+                    {
+                        co = false;
+                        break;
+                    }
+                }
+
+                if (co)
+                {
+                    dtKhachHang.Rows.Add(r);
+                    bKhachHang.ThemKH(dtKhachHang);
+                    MessageBox.Show("Them Thanh Cong");
+                    LayDSKHTrong();
+                }
+                else
+                {
+                    throw new Exception("Vui lòng điền đầy đủ thông tin");
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Thêm thất bại");
+            }
+}   
+
+        private void btClear_Click(object sender, EventArgs e)
+        {
+            tbTen.Text = null;
+            tbCMND.Text = null;
+            tbDiaChi.Text = null;
+            tbGioiTinh.Text = null;
+            tbSdt.Text = null;
+            tbMaKhach.Text = null;
+
+            tbTienCoc.Text = null;
+            tbMaPhong.Text = null;
+            tbPhong.Text = null;
+            tbTienPhong.Text = null;
+        }
+
         private void btThue_Click(object sender, EventArgs e)
         {
+            DataRow r;
+            bool co =true;
 
+            dtThuePhong = new DataTable();
+            dtThuePhong.Columns.Add("TienCoc");
+            dtThuePhong.Columns.Add("NgayNhanCoc");
+            dtThuePhong.Columns.Add("PhongID");
+            dtThuePhong.Columns.Add("KhachHangID");
+
+            r = dtThuePhong.NewRow();
+            r[0] = tbTienCoc.Text;
+            r[1] = dtpNgayNhanCoc.Text;
+            r[2] = tbMaPhong.Text;
+            r[3] = tbMaKhach.Text;
+
+            for (int i = 0; i < 4; i++)
+            {
+                if (r[i] == null || r[i].Equals(""))
+                {
+                    co = false;
+                    break;
+                }
+            }
+
+            if (co)
+            {
+                dtThuePhong.Rows.Add(r);
+                bKhachHang.ThuePhong(dtThuePhong);
+                MessageBox.Show("Them phong thanh cong");
+                LayDSKHTrong();
+                LayDSPTrong();
+                
+                btClear_Click(sender, e);
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin");
+            }
         }
     }
 }

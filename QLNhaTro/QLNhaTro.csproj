@@ -58,12 +58,14 @@
     <Compile Include="BUS\BUS_KhachHang.cs" />
     <Compile Include="BUS\BUS_Phi.cs" />
     <Compile Include="BUS\BUS_Phong.cs" />
+    <Compile Include="BUS\BUS_TraPhong.cs" />
     <Compile Include="ChiPhi.cs">
       <DependentUpon>DBQLNhaTro.tt</DependentUpon>
     </Compile>
     <Compile Include="DAO\DAO_KhachHang.cs" />
     <Compile Include="DAO\DAO_Phi.cs" />
     <Compile Include="DAO\DAO_Phong.cs" />
+    <Compile Include="DAO\DAO_TraPhong.cs" />
     <Compile Include="DBQLNhaTro.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

@@ -163,6 +163,7 @@
             this.cbLoai.Name = "cbLoai";
             this.cbLoai.Size = new System.Drawing.Size(215, 33);
             this.cbLoai.TabIndex = 19;
+            this.cbLoai.UseWaitCursor = true;
             // 
             // FCapNhatPhong
             // 

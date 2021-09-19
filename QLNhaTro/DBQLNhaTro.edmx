@@ -24,7 +24,7 @@
           <Property Name="TongTien" Type="decimal" Precision="18" Scale="0" />
           <Property Name="ThuePhongID" Type="int" />
           <Property Name="ThangID" Type="int" />
-          <Property Name="NgayLap" Type="date" />
+          <Property Name="NgayLap" Type="datetime" />
         </EntityType>
         <EntityType Name="KhachHang">
           <Key>
@@ -34,7 +34,7 @@
           <Property Name="HoTen" Type="nvarchar(max)" Nullable="false" />
           <Property Name="CMND" Type="nchar" MaxLength="10" />
           <Property Name="GioiTinh" Type="nvarchar" MaxLength="50" />
-          <Property Name="NgaySinh" Type="date" />
+          <Property Name="NgaySinh" Type="datetime" />
           <Property Name="QueQuan" Type="nvarchar(max)" />
           <Property Name="SDT" Type="nchar" MaxLength="10" />
           <Property Name="TrangThaiThuePhong" Type="bit" />
@@ -55,7 +55,6 @@
           <Property Name="SoPhong" Type="int" />
           <Property Name="LoaiPhongID" Type="int" />
           <Property Name="TrangThai" Type="bit" />
-          <Property Name="SoNguoiToiDa" Type="int" />
         </EntityType>
         <EntityType Name="Thang">
           <Key>
@@ -75,6 +74,7 @@
           <Property Name="KhachHangID" Type="int" />
           <Property Name="PhongID" Type="int" />
           <Property Name="TrangThaiThanhToan" Type="bit" />
+          <Property Name="TrangThaiTraPhong" Type="bit" />
         </EntityType>
         <EntityType Name="TraPhong">
           <Key>
@@ -84,7 +84,6 @@
           <Property Name="NgayTra" Type="date" />
           <Property Name="ThuePhongID" Type="int" />
           <Property Name="TraCoc" Type="bit" />
-          <Property Name="TrangThai" Type="bit" />
         </EntityType>
         <Association Name="FK_HoaDon_Thang">
           <End Role="Thang" Type="Self.Thang" Multiplicity="0..1" />
@@ -158,6 +157,26 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="sp_ThemKH" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="tenKH" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="cmnd" Type="nchar" Mode="In" />
+          <Parameter Name="queQuan" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="gt" Type="nvarchar" Mode="In" />
+          <Parameter Name="ngaySinh" Type="date" Mode="In" />
+          <Parameter Name="sdt" Type="nchar" Mode="In" />
+          <Parameter Name="id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_ThuePhong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="tienCoc" Type="decimal" Mode="In" />
+          <Parameter Name="ngayNhanCoc" Type="date" Mode="In" />
+          <Parameter Name="PhongID" Type="int" Mode="In" />
+          <Parameter Name="KHID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_TraPhong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PhongID" Type="int" Mode="In" />
+          <Parameter Name="KHID" Type="int" Mode="In" />
+          <Parameter Name="ThuePhongID" Type="int" Mode="In" />
+        </Function>
         <EntityContainer Name="DBQLNhaTroModelStoreContainer">
           <EntitySet Name="ChiPhi" EntityType="Self.ChiPhi" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HoaDon" EntityType="Self.HoaDon" Schema="dbo" store:Type="Tables" />
@@ -217,7 +236,7 @@
           <Property Name="ThangID" Type="Int32" />
           <NavigationProperty Name="Thang" Relationship="Self.FK_HoaDon_Thang" FromRole="HoaDon" ToRole="Thang" />
           <NavigationProperty Name="ThuePhong" Relationship="Self.FK_HoaDon_ThuePhong" FromRole="HoaDon" ToRole="ThuePhong" />
-          <Property Name="NgayLap" Type="DateTime" Precision="0" />
+          <Property Name="NgayLap" Type="DateTime" Precision="3" />
         </EntityType>
         <EntityType Name="KhachHang">
           <Key>
@@ -227,7 +246,7 @@
           <Property Name="HoTen" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="CMND" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="GioiTinh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="NgaySinh" Type="DateTime" Precision="0" />
+          <Property Name="NgaySinh" Type="DateTime" Precision="3" />
           <Property Name="QueQuan" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="ThuePhongs" Relationship="Self.FK_ThuePhong_KhachHang" FromRole="KhachHang" ToRole="ThuePhong" />
           <Property Name="SDT" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
@@ -252,7 +271,6 @@
           <NavigationProperty Name="LoaiPhong" Relationship="Self.FK_Phong_LoaiPhong" FromRole="Phong" ToRole="LoaiPhong" />
           <NavigationProperty Name="ThuePhongs" Relationship="Self.FK_ThuePhong_Phong" FromRole="Phong" ToRole="ThuePhong" />
           <Property Name="TrangThai" Type="Boolean" />
-          <Property Name="SoNguoiToiDa" Type="Int32" />
         </EntityType>
         <EntityType Name="Thang">
           <Key>
@@ -277,6 +295,7 @@
           <NavigationProperty Name="Phong" Relationship="Self.FK_ThuePhong_Phong" FromRole="ThuePhong" ToRole="Phong" />
           <NavigationProperty Name="TraPhongs" Relationship="Self.FK_TraPhong_ThuePhong1" FromRole="ThuePhong" ToRole="TraPhong" />
           <Property Name="TrangThaiThanhToan" Type="Boolean" />
+          <Property Name="TrangThaiTraPhong" Type="Boolean" />
         </EntityType>
         <EntityType Name="TraPhong">
           <Key>
@@ -287,7 +306,6 @@
           <Property Name="ThuePhongID" Type="Int32" />
           <Property Name="TraCoc" Type="Boolean" />
           <NavigationProperty Name="ThuePhong" Relationship="Self.FK_TraPhong_ThuePhong1" FromRole="TraPhong" ToRole="ThuePhong" />
-          <Property Name="TrangThai" Type="Boolean" />
         </EntityType>
         <Association Name="FK_HoaDon_Thang">
           <End Role="Thang" Type="Self.Thang" Multiplicity="0..1" />
@@ -394,6 +412,26 @@
             <End Role="ThuePhong" EntitySet="ThuePhongs" />
             <End Role="TraPhong" EntitySet="TraPhongs" />
           </AssociationSet>
+          <FunctionImport Name="sp_ThemKH">
+            <Parameter Name="tenKH" Mode="In" Type="String" />
+            <Parameter Name="cmnd" Mode="In" Type="String" />
+            <Parameter Name="queQuan" Mode="In" Type="String" />
+            <Parameter Name="gt" Mode="In" Type="String" />
+            <Parameter Name="ngaySinh" Mode="In" Type="DateTime" />
+            <Parameter Name="sdt" Mode="In" Type="String" />
+            <Parameter Name="id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_ThuePhong">
+            <Parameter Name="tienCoc" Mode="In" Type="Decimal" />
+            <Parameter Name="ngayNhanCoc" Mode="In" Type="DateTime" />
+            <Parameter Name="PhongID" Mode="In" Type="Int32" />
+            <Parameter Name="KHID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_TraPhong">
+            <Parameter Name="PhongID" Mode="In" Type="Int32" />
+            <Parameter Name="KHID" Mode="In" Type="Int32" />
+            <Parameter Name="ThuePhongID" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
@@ -450,7 +488,6 @@
           <EntitySetMapping Name="Phongs">
             <EntityTypeMapping TypeName="DBQLNhaTroModel.Phong">
               <MappingFragment StoreEntitySet="Phong">
-                <ScalarProperty Name="SoNguoiToiDa" ColumnName="SoNguoiToiDa" />
                 <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="SoPhong" ColumnName="SoPhong" />
@@ -469,6 +506,7 @@
           <EntitySetMapping Name="ThuePhongs">
             <EntityTypeMapping TypeName="DBQLNhaTroModel.ThuePhong">
               <MappingFragment StoreEntitySet="ThuePhong">
+                <ScalarProperty Name="TrangThaiTraPhong" ColumnName="TrangThaiTraPhong" />
                 <ScalarProperty Name="TrangThaiThanhToan" ColumnName="TrangThaiThanhToan" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="TienCoc" ColumnName="TienCoc" />
@@ -482,7 +520,6 @@
           <EntitySetMapping Name="TraPhongs">
             <EntityTypeMapping TypeName="DBQLNhaTroModel.TraPhong">
               <MappingFragment StoreEntitySet="TraPhong">
-                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="NgayTra" ColumnName="NgayTra" />
                 <ScalarProperty Name="ThuePhongID" ColumnName="ThuePhongID" />
@@ -490,6 +527,9 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_ThemKH" FunctionName="DBQLNhaTroModel.Store.sp_ThemKH" />
+          <FunctionImportMapping FunctionImportName="sp_ThuePhong" FunctionName="DBQLNhaTroModel.Store.sp_ThuePhong" />
+          <FunctionImportMapping FunctionImportName="sp_TraPhong" FunctionName="DBQLNhaTroModel.Store.sp_TraPhong" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
