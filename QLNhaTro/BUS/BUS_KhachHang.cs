@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,6 +25,7 @@ namespace QLNhaTro.BUS
         {
             dg.DataSource = dKH.LayDSKHTrong();
         }
+
         public void ThemKH(DataTable dtKhachHang)
         {
             try
@@ -72,6 +74,45 @@ namespace QLNhaTro.BUS
                 dKH.ThuePhong(tp);
             }
         }
-
+        public bool SuaKH(KhachHang kh)
+        {
+            if (dKH.KiemTraKH(kh))
+            {
+                try
+                {
+                    dKH.SuaKH(kh);
+                    return true;
+                }
+                catch (DbUpdateException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public bool XoaKH(KhachHang kh)
+        {
+            if (dKH.KiemTraKH(kh))
+            {
+                try
+                {
+                    dKH.XoaKH(kh);
+                    return true;
+                }
+                catch (DbUpdateException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

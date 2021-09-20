@@ -41,7 +41,7 @@ namespace QLNhaTro
             if(e.RowIndex >= 0 && e.RowIndex < dgvPhong.Rows.Count)
             {
                 tbMa.Text = dgvPhong.Rows[e.RowIndex].Cells[0].Value.ToString();
-                //cbLoai.Text = dgvPhong.Rows[e.RowIndex].Cells[1].Value.ToString();
+                cbLoai.Text = dgvPhong.Rows[e.RowIndex].Cells[1].Value.ToString();
                 tbPhong.Text = dgvPhong.Rows[e.RowIndex].Cells[2].Value.ToString();
             }
         }
@@ -51,11 +51,11 @@ namespace QLNhaTro
             Phong p = new Phong();
             //p.ID = int.Parse(tbMa.Text);
             p.SoPhong = int.Parse(tbPhong.Text);
-            //lp.ID = int.Parse(tbMa.Text);
+            //p.LoaiPhong = cbLoai.SelectedValue.ToString();
             if (busP.ThemPhong(p))
             {
                 MessageBox.Show("Thêm phòng thành công");
-                busP.LayDSLoaiPhong(dgvPhong);
+                busP.LayDSPhong(dgvPhong);
                 HienThiDSPhong();
             }
             else

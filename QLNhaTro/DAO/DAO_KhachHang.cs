@@ -42,6 +42,7 @@ namespace QLNhaTro.DAO
                                     }).ToList();
             return ds;
         }
+
         public void ThemKH(KhachHang kh)
         {
             db.sp_ThemKH(kh.HoTen, kh.CMND, kh.QueQuan, kh.GioiTinh, kh.NgaySinh, kh.SDT, kh.ID);
@@ -50,6 +51,34 @@ namespace QLNhaTro.DAO
         public void ThuePhong(ThuePhong tp)
         {
             db.sp_ThuePhong(tp.TienCoc, tp.NgayNhanCoc, tp.PhongID, tp.KhachHangID);
+            db.SaveChanges();
+        }
+        public bool KiemTraKH(KhachHang kh)
+        {
+            KhachHang cp = db.KhachHangs.Find(kh.ID);
+            if (cp != null)
+                return true;
+            else
+                return false;
+        }
+        public void SuaKH(KhachHang kh)
+        {
+            KhachHang cp = db.KhachHangs.Find(kh.ID);
+            cp.ID = kh.ID;
+            cp.HoTen = kh.HoTen;
+            cp.GioiTinh = kh.GioiTinh;
+            cp.NgaySinh = kh.NgaySinh;
+            cp.QueQuan = kh.QueQuan;
+            cp.SDT = kh.SDT;
+            cp.CMND = kh.CMND;
+            cp.ThuePhongs = kh.ThuePhongs;
+            db.SaveChanges();
+        }
+
+        public void XoaKH(KhachHang kh)
+        {
+            KhachHang cp = db.KhachHangs.Find(kh.ID);
+            db.KhachHangs.Remove(cp);
             db.SaveChanges();
         }
     }
