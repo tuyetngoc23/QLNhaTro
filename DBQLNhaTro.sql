@@ -1,10 +1,10 @@
 
-/****** Object:  Database [DBQLNhaTro]    Script Date: 9/19/2021 17:24:57 ******/
+/****** Object:  Database [DBQLNhaTro]    Script Date: 9/20/2021 11:59:39 ******/
 CREATE DATABASE [DBQLNhaTro]
 GO
 USE [DBQLNhaTro]
 GO
-/****** Object:  Table [dbo].[ChiPhi]    Script Date: 9/19/2021 17:24:57 ******/
+/****** Object:  Table [dbo].[ChiPhi]    Script Date: 9/20/2021 11:59:40 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -20,7 +20,7 @@ CREATE TABLE [dbo].[ChiPhi](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[HoaDon]    Script Date: 9/19/2021 17:24:57 ******/
+/****** Object:  Table [dbo].[HoaDon]    Script Date: 9/20/2021 11:59:40 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -39,7 +39,7 @@ CREATE TABLE [dbo].[HoaDon](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[KhachHang]    Script Date: 9/19/2021 17:24:57 ******/
+/****** Object:  Table [dbo].[KhachHang]    Script Date: 9/20/2021 11:59:40 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -59,7 +59,7 @@ CREATE TABLE [dbo].[KhachHang](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[LoaiPhong]    Script Date: 9/19/2021 17:24:57 ******/
+/****** Object:  Table [dbo].[LoaiPhong]    Script Date: 9/20/2021 11:59:40 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -74,7 +74,7 @@ CREATE TABLE [dbo].[LoaiPhong](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Phong]    Script Date: 9/19/2021 17:24:57 ******/
+/****** Object:  Table [dbo].[Phong]    Script Date: 9/20/2021 11:59:40 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -90,7 +90,7 @@ CREATE TABLE [dbo].[Phong](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Thang]    Script Date: 9/19/2021 17:24:57 ******/
+/****** Object:  Table [dbo].[Thang]    Script Date: 9/20/2021 11:59:40 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -104,7 +104,7 @@ CREATE TABLE [dbo].[Thang](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[ThuePhong]    Script Date: 9/19/2021 17:24:57 ******/
+/****** Object:  Table [dbo].[ThuePhong]    Script Date: 9/20/2021 11:59:40 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -124,7 +124,7 @@ CREATE TABLE [dbo].[ThuePhong](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[TraPhong]    Script Date: 9/19/2021 17:24:57 ******/
+/****** Object:  Table [dbo].[TraPhong]    Script Date: 9/20/2021 11:59:40 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -153,6 +153,12 @@ GO
 INSERT [dbo].[ChiPhi] ([ID], [Ten], [Gia], [DonViTinh]) VALUES (5, N'Dịch vụ khác', CAST(20000 AS Decimal(18, 0)), N'phòng')
 GO
 SET IDENTITY_INSERT [dbo].[ChiPhi] OFF
+GO
+SET IDENTITY_INSERT [dbo].[HoaDon] ON 
+GO
+INSERT [dbo].[HoaDon] ([ID], [SoDien], [SoNuoc], [TongTien], [ThuePhongID], [ThangID], [NgayLap]) VALUES (1, 1, 2, CAST(1517500 AS Decimal(18, 0)), 2, 1, CAST(N'2021-09-20T11:34:06.627' AS DateTime))
+GO
+SET IDENTITY_INSERT [dbo].[HoaDon] OFF
 GO
 SET IDENTITY_INSERT [dbo].[KhachHang] ON 
 GO
@@ -226,7 +232,7 @@ SET IDENTITY_INSERT [dbo].[ThuePhong] ON
 GO
 INSERT [dbo].[ThuePhong] ([ID], [TienCoc], [NgayThue], [NgayNhanCoc], [KhachHangID], [PhongID], [TrangThaiThanhToan], [TrangThaiTraPhong]) VALUES (1, CAST(1000000 AS Decimal(18, 0)), CAST(N'2021-09-17' AS Date), CAST(N'2021-09-16' AS Date), 1, 4, 0, 1)
 GO
-INSERT [dbo].[ThuePhong] ([ID], [TienCoc], [NgayThue], [NgayNhanCoc], [KhachHangID], [PhongID], [TrangThaiThanhToan], [TrangThaiTraPhong]) VALUES (2, CAST(1000000 AS Decimal(18, 0)), CAST(N'2021-09-17' AS Date), CAST(N'2021-09-16' AS Date), 1, 4, 0, 0)
+INSERT [dbo].[ThuePhong] ([ID], [TienCoc], [NgayThue], [NgayNhanCoc], [KhachHangID], [PhongID], [TrangThaiThanhToan], [TrangThaiTraPhong]) VALUES (2, CAST(1000000 AS Decimal(18, 0)), CAST(N'2021-09-17' AS Date), CAST(N'2021-09-16' AS Date), 1, 4, 1, 0)
 GO
 INSERT [dbo].[ThuePhong] ([ID], [TienCoc], [NgayThue], [NgayNhanCoc], [KhachHangID], [PhongID], [TrangThaiThanhToan], [TrangThaiTraPhong]) VALUES (3, CAST(800000 AS Decimal(18, 0)), CAST(N'2021-09-17' AS Date), CAST(N'2021-09-17' AS Date), 1, 5, 0, 1)
 GO
@@ -284,7 +290,7 @@ REFERENCES [dbo].[ThuePhong] ([ID])
 GO
 ALTER TABLE [dbo].[TraPhong] CHECK CONSTRAINT [FK_TraPhong_ThuePhong1]
 GO
-/****** Object:  StoredProcedure [dbo].[sp_ThemKH]    Script Date: 9/19/2021 17:24:57 ******/
+/****** Object:  StoredProcedure [dbo].[sp_ThemKH]    Script Date: 9/20/2021 11:59:40 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -316,7 +322,7 @@ BEGIN
 		end
 END
 GO
-/****** Object:  StoredProcedure [dbo].[sp_ThuePhong]    Script Date: 9/19/2021 17:24:57 ******/
+/****** Object:  StoredProcedure [dbo].[sp_ThuePhong]    Script Date: 9/20/2021 11:59:40 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -334,7 +340,22 @@ BEGIN
 	where ID = @KHID
 END
 GO
-/****** Object:  StoredProcedure [dbo].[sp_TraPhong]    Script Date: 9/19/2021 17:24:57 ******/
+/****** Object:  StoredProcedure [dbo].[sp_TinhTien]    Script Date: 9/20/2021 11:59:40 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROC [dbo].[sp_TinhTien] @maThue int, @soDien int, @soNuoc int, @tongTien decimal, @thangID int
+AS
+BEGIN
+	update ThuePhong
+	set TrangThaiThanhToan = 1
+	where ID = @maThue
+
+	insert into HoaDon values(@soDien, @soNuoc, @tongTien, @maThue, @thangID, GETDATE())
+END
+GO
+/****** Object:  StoredProcedure [dbo].[sp_TraPhong]    Script Date: 9/20/2021 11:59:40 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON

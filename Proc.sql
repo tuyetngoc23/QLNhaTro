@@ -1,3 +1,13 @@
+CREATE PROC sp_TinhTien @maThue int, @soDien int, @soNuoc int, @tongTien decimal, @thangID int
+AS
+BEGIN
+	update ThuePhong
+	set TrangThaiThanhToan = 1
+	where ID = @maThue
+
+	insert into HoaDon values(@soDien, @soNuoc, @tongTien, @maThue, @thangID, GETDATE())
+END
+
 Alter PROC sp_TraPhong @PhongID int, @KHID int, @ThuePhongID int
 AS
 BEGIN

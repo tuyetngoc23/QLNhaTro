@@ -106,5 +106,30 @@ namespace QLNhaTro
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_TraPhong", phongIDParameter, kHIDParameter, thuePhongIDParameter);
         }
+    
+        public virtual int sp_TinhTien(Nullable<int> maThue, Nullable<int> soDien, Nullable<int> soNuoc, Nullable<decimal> tongTien, Nullable<int> thangID)
+        {
+            var maThueParameter = maThue.HasValue ?
+                new ObjectParameter("maThue", maThue) :
+                new ObjectParameter("maThue", typeof(int));
+    
+            var soDienParameter = soDien.HasValue ?
+                new ObjectParameter("soDien", soDien) :
+                new ObjectParameter("soDien", typeof(int));
+    
+            var soNuocParameter = soNuoc.HasValue ?
+                new ObjectParameter("soNuoc", soNuoc) :
+                new ObjectParameter("soNuoc", typeof(int));
+    
+            var tongTienParameter = tongTien.HasValue ?
+                new ObjectParameter("tongTien", tongTien) :
+                new ObjectParameter("tongTien", typeof(decimal));
+    
+            var thangIDParameter = thangID.HasValue ?
+                new ObjectParameter("thangID", thangID) :
+                new ObjectParameter("thangID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_TinhTien", maThueParameter, soDienParameter, soNuocParameter, tongTienParameter, thangIDParameter);
+        }
     }
 }
