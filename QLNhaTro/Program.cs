@@ -16,7 +16,7 @@ namespace QLNhaTro
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FTinhTien());
+            Application.Run(new FMain());
         }
     }
 }

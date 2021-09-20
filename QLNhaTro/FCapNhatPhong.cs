@@ -24,14 +24,15 @@ namespace QLNhaTro
             dgvPhong.DataSource = null;
             busP.LayDSPhong(dgvPhong);
             dgvPhong.Columns[0].Width = (int)(dgvPhong.Width * 0.2);
-            dgvPhong.Columns[1].Width = (int)(dgvPhong.Width * 0.25);
-            dgvPhong.Columns[2].Width = (int)(dgvPhong.Width * 0.25);
-            dgvPhong.Columns[3].Width = (int)(dgvPhong.Width * 0.25);
+            dgvPhong.Columns[1].Width = (int)(dgvPhong.Width * 0.4);
+            dgvPhong.Columns[2].Width = (int)(dgvPhong.Width * 0.4);
+           
         }
 
         private void FCapNhatPhong_Load(object sender, EventArgs e)
         {
             HienThiDSPhong();
+            busP.LayDSLoaiPhong(cbLoai);
             
         }
 
@@ -40,27 +41,26 @@ namespace QLNhaTro
             if(e.RowIndex >= 0 && e.RowIndex < dgvPhong.Rows.Count)
             {
                 tbMa.Text = dgvPhong.Rows[e.RowIndex].Cells[0].Value.ToString();
-                tbPhong.Text = dgvPhong.Rows[e.RowIndex].Cells[3].Value.ToString();
-                //tbToiDa.Text = dgvPhong.Rows[e.RowIndex].Cells[2].Value.ToString();
                 //cbLoai.Text = dgvPhong.Rows[e.RowIndex].Cells[1].Value.ToString();
+                tbPhong.Text = dgvPhong.Rows[e.RowIndex].Cells[2].Value.ToString();
             }
         }
 
         private void btThem_Click(object sender, EventArgs e)
         {
             Phong p = new Phong();
-            p.ID = int.Parse(tbMa.Text);
+            //p.ID = int.Parse(tbMa.Text);
             p.SoPhong = int.Parse(tbPhong.Text);
             //lp.ID = int.Parse(tbMa.Text);
             if (busP.ThemPhong(p))
             {
-                MessageBox.Show("Them phong thành công");
+                MessageBox.Show("Thêm phòng thành công");
                 busP.LayDSLoaiPhong(dgvPhong);
                 HienThiDSPhong();
             }
             else
             {
-                MessageBox.Show("Them phong thất bại");
+                MessageBox.Show("Thêm phòng thất bại");
             }
         }
 
@@ -69,16 +69,17 @@ namespace QLNhaTro
             Phong p = new Phong();
             p.ID = int.Parse(tbMa.Text);
             p.SoPhong = int.Parse(tbPhong.Text);
-            p.ID = int.Parse(tbMa.Text);
+            
+            //Gọi sự kiện sửa của BUS
             if (busP.SuaPhong(p))
             {
-                MessageBox.Show("Sửa phong thành công");
+                MessageBox.Show("Sửa phòng thành công");
                 busP.LayDSPhong(dgvPhong);
                 HienThiDSPhong();
             }
             else
             {
-                MessageBox.Show("Sửa loai phong thất bại");
+                MessageBox.Show("Sửa phòng thất bại");
             }
         }
 
@@ -90,13 +91,13 @@ namespace QLNhaTro
             //Gọi sự kiện xóa của BUS
             if (busP.XoaPhong(p))
             {
-                MessageBox.Show("Xóa phong thành công");
+                MessageBox.Show("Xóa loại phòng thành công");
                 busP.LayDSPhong(dgvPhong);
                 HienThiDSPhong();
             }
             else
             {
-                MessageBox.Show("Xóa loai phong thất bại");
+                MessageBox.Show("Xóa loại phòng thất bại");
             }
         }
     }

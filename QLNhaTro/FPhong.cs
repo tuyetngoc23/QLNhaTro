@@ -26,7 +26,7 @@ namespace QLNhaTro
             dGVPhong.Columns[1].Width = (int)(dGVPhong.Width * 0.25);
             dGVPhong.Columns[2].Width = (int)(dGVPhong.Width * 0.25);
             dGVPhong.Columns[3].Width = (int)(dGVPhong.Width * 0.2);
-            dGVPhong.Columns[4].Width = (int)(dGVPhong.Width * 0.3);
+           // dGVPhong.Columns[4].Width = (int)(dGVPhong.Width * 0.3);
         }
         
         private void FTrangChu_Load(object sender, EventArgs e)

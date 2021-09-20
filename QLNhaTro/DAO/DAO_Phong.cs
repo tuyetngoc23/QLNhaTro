@@ -25,6 +25,7 @@ namespace QLNhaTro.DAO
             return ds;
         }
 
+
         public dynamic LayDSPTheoPhongNho()
         {
             var ds = db.Phongs.Where(s => s.TrangThai == false && s.LoaiPhongID == 1)
@@ -125,7 +126,7 @@ namespace QLNhaTro.DAO
         {
             Phong P = db.Phongs.Find(p.ID);
             P.ID = p.ID;
-            P.LoaiPhong.Ten = p.LoaiPhong.Ten;
+            //P.LoaiPhong.Ten = p.LoaiPhong.Ten;
             p.SoPhong = p.SoPhong;
             db.SaveChanges();
         }

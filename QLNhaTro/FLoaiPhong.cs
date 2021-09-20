@@ -44,13 +44,13 @@ namespace QLNhaTro
             
             if (busP.ThemLoaiPhong(lp))
             {
-                MessageBox.Show("Them loai phong thành công");
+                MessageBox.Show("Thêm loại phòng thành công");
                 busP.LayDSLoaiPhong(dgvLoai);
                 HienThiDSLoaiPhong();
             }
             else
             {
-                MessageBox.Show("Them loai phong thất bại");
+                MessageBox.Show("Thêm loại phòng thất bại");
             }
 
         }
@@ -74,13 +74,13 @@ namespace QLNhaTro
             //Gọi sự kiện sửa của BUS
             if (busP.SuaLoaiPhong(lp))
             {
-                MessageBox.Show("Sửa loai phong thành công");
+                MessageBox.Show("Sửa loại phòng thành công");
                 busP.LayDSLoaiPhong(dgvLoai);
                 HienThiDSLoaiPhong();
             }
             else
             {
-                MessageBox.Show("Sửa loai phong thất bại");
+                MessageBox.Show("Sửa loại phòng thất bại");
             }
         }
 
@@ -92,13 +92,13 @@ namespace QLNhaTro
             //Gọi sự kiện xóa của BUS
             if (busP.XoaLoaiPhong(lp))
             {
-                MessageBox.Show("Xóa loai phong thành công");
+                MessageBox.Show("Xóa loại phòng thành công");
                 busP.LayDSLoaiPhong(dgvLoai);
                 HienThiDSLoaiPhong();
             }
             else
             {
-                MessageBox.Show("Xóa loai phong thất bại");
+                MessageBox.Show("Xóa loại phòng thất bại");
             }
         }
     }
