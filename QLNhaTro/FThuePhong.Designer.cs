@@ -128,6 +128,7 @@
             // 
             // cbLoaiPhong
             // 
+            this.cbLoaiPhong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbLoaiPhong.FormattingEnabled = true;
             this.cbLoaiPhong.Location = new System.Drawing.Point(146, 29);
             this.cbLoaiPhong.Name = "cbLoaiPhong";

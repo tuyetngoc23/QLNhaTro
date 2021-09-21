@@ -48,6 +48,7 @@
             this.traPhongToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quanLyPhiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thanhToanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbExit)).BeginInit();
@@ -67,7 +68,7 @@
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTop.Location = new System.Drawing.Point(0, 0);
             this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Size = new System.Drawing.Size(954, 30);
+            this.pnlTop.Size = new System.Drawing.Size(877, 30);
             this.pnlTop.TabIndex = 0;
             // 
             // pictureBox1
@@ -97,7 +98,7 @@
             this.ptbExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ptbExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ptbExit.Image = global::QLNhaTro.Properties.Resources._12;
-            this.ptbExit.Location = new System.Drawing.Point(923, 6);
+            this.ptbExit.Location = new System.Drawing.Point(846, 6);
             this.ptbExit.Name = "ptbExit";
             this.ptbExit.Size = new System.Drawing.Size(20, 20);
             this.ptbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -110,7 +111,7 @@
             this.ptbMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ptbMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ptbMinimize.Image = global::QLNhaTro.Properties.Resources.tải_xuống;
-            this.ptbMinimize.Location = new System.Drawing.Point(852, 6);
+            this.ptbMinimize.Location = new System.Drawing.Point(775, 6);
             this.ptbMinimize.Name = "ptbMinimize";
             this.ptbMinimize.Size = new System.Drawing.Size(20, 20);
             this.ptbMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -123,7 +124,7 @@
             this.ptbState.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ptbState.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ptbState.Image = global::QLNhaTro.Properties.Resources.nut;
-            this.ptbState.Location = new System.Drawing.Point(886, 6);
+            this.ptbState.Location = new System.Drawing.Point(809, 6);
             this.ptbState.Name = "ptbState";
             this.ptbState.Size = new System.Drawing.Size(20, 20);
             this.ptbState.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -137,25 +138,25 @@
             this.pnlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlLeft.Location = new System.Drawing.Point(0, 30);
             this.pnlLeft.Name = "pnlLeft";
-            this.pnlLeft.Size = new System.Drawing.Size(10, 445);
+            this.pnlLeft.Size = new System.Drawing.Size(10, 451);
             this.pnlLeft.TabIndex = 1;
             // 
             // pnlRight
             // 
             this.pnlRight.BackColor = System.Drawing.Color.LightSlateGray;
             this.pnlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlRight.Location = new System.Drawing.Point(944, 30);
+            this.pnlRight.Location = new System.Drawing.Point(867, 30);
             this.pnlRight.Name = "pnlRight";
-            this.pnlRight.Size = new System.Drawing.Size(10, 445);
+            this.pnlRight.Size = new System.Drawing.Size(10, 451);
             this.pnlRight.TabIndex = 1;
             // 
             // pnlBot
             // 
             this.pnlBot.BackColor = System.Drawing.Color.LightSlateGray;
             this.pnlBot.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlBot.Location = new System.Drawing.Point(0, 475);
+            this.pnlBot.Location = new System.Drawing.Point(0, 481);
             this.pnlBot.Name = "pnlBot";
-            this.pnlBot.Size = new System.Drawing.Size(954, 10);
+            this.pnlBot.Size = new System.Drawing.Size(877, 10);
             this.pnlBot.TabIndex = 1;
             // 
             // mnsMain
@@ -169,10 +170,11 @@
             this.quanLyKHToolStripMenuItem,
             this.quanLyPhongToolStripMenuItem,
             this.quanLyPhiToolStripMenuItem,
-            this.thanhToanToolStripMenuItem});
+            this.thanhToanToolStripMenuItem,
+            this.ReportToolStripMenuItem});
             this.mnsMain.Location = new System.Drawing.Point(10, 30);
             this.mnsMain.Name = "mnsMain";
-            this.mnsMain.Size = new System.Drawing.Size(934, 40);
+            this.mnsMain.Size = new System.Drawing.Size(857, 40);
             this.mnsMain.TabIndex = 3;
             this.mnsMain.Text = "menuStrip1";
             // 
@@ -255,12 +257,20 @@
             this.thanhToanToolStripMenuItem.Text = "Thanh toán";
             this.thanhToanToolStripMenuItem.Click += new System.EventHandler(this.thanhToanToolStripMenuItem_Click);
             // 
+            // ReportToolStripMenuItem
+            // 
+            this.ReportToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.ReportToolStripMenuItem.Name = "ReportToolStripMenuItem";
+            this.ReportToolStripMenuItem.Size = new System.Drawing.Size(105, 38);
+            this.ReportToolStripMenuItem.Text = "Report";
+            this.ReportToolStripMenuItem.Click += new System.EventHandler(this.ReportToolStripMenuItem_Click);
+            // 
             // FMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(954, 485);
+            this.ClientSize = new System.Drawing.Size(877, 491);
             this.Controls.Add(this.mnsMain);
             this.Controls.Add(this.pnlRight);
             this.Controls.Add(this.pnlLeft);
@@ -307,6 +317,7 @@
         private System.Windows.Forms.ToolStripMenuItem thuePhongToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem traPhongToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem danhSachPhongToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ReportToolStripMenuItem;
     }
 }
 

@@ -251,6 +251,7 @@
             // 
             // cbThang
             // 
+            this.cbThang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbThang.FormattingEnabled = true;
             this.cbThang.Location = new System.Drawing.Point(291, 13);
             this.cbThang.Name = "cbThang";

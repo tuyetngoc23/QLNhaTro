@@ -1,4 +1,6 @@
-﻿using System;
+﻿using QLNhaTro.BUS;
+using QLNhaTro.Report;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,7 @@ namespace QLNhaTro
 {
     public partial class FMain : Form
     {
+       
         public FMain()
         {
             InitializeComponent();
@@ -127,6 +130,26 @@ namespace QLNhaTro
             }
             FCapNhatPhong f = new FCapNhatPhong();
             f.MdiParent = this;
+            f.Show();
+        }
+
+        private void ReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DBQLNhaTroEntities db = new DBQLNhaTroEntities();
+            foreach (Form frm in this.MdiChildren)
+            {
+                frm.Close();
+            }
+            FReport f = new FReport();
+            cReport c = new cReport();
+            c.SetDataSource(db.HoaDons.Select(s=> new { 
+                s.ThangID,
+                s.ThuePhong.PhongID,
+                s.TongTien
+            }).ToList().OrderBy(s => s.ThangID));
+
+            f.MdiParent = this;
+            f.cRVDoanhThu.ReportSource = c;
             f.Show();
         }
     }
