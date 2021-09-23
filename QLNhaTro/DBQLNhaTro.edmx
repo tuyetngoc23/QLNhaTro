@@ -172,13 +172,6 @@
           <Parameter Name="PhongID" Type="int" Mode="In" />
           <Parameter Name="KHID" Type="int" Mode="In" />
         </Function>
-        <Function Name="sp_TinhTien" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="maThue" Type="int" Mode="In" />
-          <Parameter Name="soDien" Type="int" Mode="In" />
-          <Parameter Name="soNuoc" Type="int" Mode="In" />
-          <Parameter Name="tongTien" Type="decimal" Mode="In" />
-          <Parameter Name="thangID" Type="int" Mode="In" />
-        </Function>
         <Function Name="sp_TraPhong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="PhongID" Type="int" Mode="In" />
           <Parameter Name="KHID" Type="int" Mode="In" />
@@ -544,7 +537,6 @@
           <FunctionImportMapping FunctionImportName="sp_ThemKH" FunctionName="DBQLNhaTroModel.Store.sp_ThemKH" />
           <FunctionImportMapping FunctionImportName="sp_ThuePhong" FunctionName="DBQLNhaTroModel.Store.sp_ThuePhong" />
           <FunctionImportMapping FunctionImportName="sp_TraPhong" FunctionName="DBQLNhaTroModel.Store.sp_TraPhong" />
-          <FunctionImportMapping FunctionImportName="sp_TinhTien" FunctionName="DBQLNhaTroModel.Store.sp_TinhTien" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

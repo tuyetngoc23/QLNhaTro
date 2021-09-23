@@ -74,16 +74,39 @@ namespace QLNhaTro.BUS
                 dKH.ThuePhong(tp);
             }
         }
+        public void LayDSKhachThue(DataGridView dg)
+        {
+            dg.DataSource = dKH.LayDSKhachThue();
+        }
+        public void LayDSPTheoPhongNho(DataGridView dg)
+        {
+            dg.DataSource = dKH.LayDSPTheoPhongNho();
+        }
+        public void LayDSPTheoPhongVua(DataGridView dg)
+        {
+            dg.DataSource = dKH.LayDSPTheoPhongVua();
+        }
+        public void LayDSPTheoPhongLon(DataGridView dg)
+        {
+            dg.DataSource = dKH.LayDSPTheoPhongLon();
+        }
+        public void LayDSLoaiPhong(ComboBox cb)
+        {
+            cb.DataSource = dKH.LayDSLoaiPhong();
+            cb.DisplayMember = "Ten";
+            cb.ValueMember = "ID";
+        }
         public bool SuaKH(KhachHang kh)
         {
             if (dKH.KiemTraKH(kh))
             {
+                
                 try
                 {
                     dKH.SuaKH(kh);
                     return true;
                 }
-                catch (DbUpdateException ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                     return false;
@@ -103,9 +126,10 @@ namespace QLNhaTro.BUS
                     dKH.XoaKH(kh);
                     return true;
                 }
-                catch (DbUpdateException ex)
+                catch (DbUpdateException)
                 {
-                    MessageBox.Show(ex.Message);
+                    //MessageBox.Show(ex.Message);
+                    MessageBox.Show("Khách hàng hiện đang thuê, không thể xóa");
                     return false;
                 }
             }

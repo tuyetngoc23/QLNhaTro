@@ -66,7 +66,8 @@ namespace QLNhaTro.DAO
                 {
                     s.ID,
                     s.LoaiPhong.Ten,
-                    s.SoPhong
+                    s.SoPhong,
+                    s.LoaiPhong.Gia
                 }).ToList();
             return ds;
         }
