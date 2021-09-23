@@ -35,7 +35,7 @@
             this.tbPhong = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.tbToiDa = new System.Windows.Forms.TextBox();
+            this.tbGia = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btThem = new System.Windows.Forms.Button();
             this.btSua = new System.Windows.Forms.Button();
@@ -109,21 +109,21 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Loại phòng:";
             // 
-            // tbToiDa
+            // tbGia
             // 
-            this.tbToiDa.Location = new System.Drawing.Point(648, 68);
-            this.tbToiDa.Name = "tbToiDa";
-            this.tbToiDa.Size = new System.Drawing.Size(215, 30);
-            this.tbToiDa.TabIndex = 13;
+            this.tbGia.Location = new System.Drawing.Point(648, 68);
+            this.tbGia.Name = "tbGia";
+            this.tbGia.Size = new System.Drawing.Size(215, 30);
+            this.tbGia.TabIndex = 13;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(489, 72);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(148, 25);
+            this.label8.Size = new System.Drawing.Size(48, 25);
             this.label8.TabIndex = 12;
-            this.label8.Text = "Số người tối đa:";
+            this.label8.Text = "Giá:";
             // 
             // btThem
             // 
@@ -164,6 +164,7 @@
             this.cbLoai.Size = new System.Drawing.Size(215, 33);
             this.cbLoai.TabIndex = 19;
             this.cbLoai.UseWaitCursor = true;
+            this.cbLoai.SelectedIndexChanged += new System.EventHandler(this.cbLoai_SelectedIndexChanged);
             // 
             // FCapNhatPhong
             // 
@@ -175,7 +176,7 @@
             this.Controls.Add(this.btXoa);
             this.Controls.Add(this.btSua);
             this.Controls.Add(this.btThem);
-            this.Controls.Add(this.tbToiDa);
+            this.Controls.Add(this.tbGia);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.tbPhong);
@@ -207,7 +208,7 @@
         private System.Windows.Forms.TextBox tbPhong;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox tbToiDa;
+        private System.Windows.Forms.TextBox tbGia;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btThem;
         private System.Windows.Forms.Button btSua;

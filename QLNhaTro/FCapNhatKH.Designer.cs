@@ -46,8 +46,6 @@
             this.btXoa = new System.Windows.Forms.Button();
             this.dtpNgay = new System.Windows.Forms.DateTimePicker();
             this.cbGioiTinh = new System.Windows.Forms.ComboBox();
-            this.cbPhong = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKH)).BeginInit();
             this.SuspendLayout();
             // 
@@ -215,32 +213,12 @@
             this.cbGioiTinh.Size = new System.Drawing.Size(202, 33);
             this.cbGioiTinh.TabIndex = 22;
             // 
-            // cbPhong
-            // 
-            this.cbPhong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbPhong.FormattingEnabled = true;
-            this.cbPhong.Location = new System.Drawing.Point(649, 177);
-            this.cbPhong.Name = "cbPhong";
-            this.cbPhong.Size = new System.Drawing.Size(202, 33);
-            this.cbPhong.TabIndex = 24;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(516, 180);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(75, 25);
-            this.label6.TabIndex = 23;
-            this.label6.Text = "Phòng:";
-            // 
             // FCapNhatKH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PowderBlue;
             this.ClientSize = new System.Drawing.Size(1072, 440);
-            this.Controls.Add(this.cbPhong);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.cbGioiTinh);
             this.Controls.Add(this.dtpNgay);
             this.Controls.Add(this.btXoa);
@@ -292,7 +270,5 @@
         private System.Windows.Forms.Button btXoa;
         private System.Windows.Forms.DateTimePicker dtpNgay;
         private System.Windows.Forms.ComboBox cbGioiTinh;
-        private System.Windows.Forms.ComboBox cbPhong;
-        private System.Windows.Forms.Label label6;
     }
 }

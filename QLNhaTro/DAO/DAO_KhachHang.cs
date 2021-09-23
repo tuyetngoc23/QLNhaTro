@@ -53,6 +53,64 @@ namespace QLNhaTro.DAO
             db.sp_ThuePhong(tp.TienCoc, tp.NgayNhanCoc, tp.PhongID, tp.KhachHangID);
             db.SaveChanges();
         }
+        public dynamic LayDSKhachThue()
+        {
+            var ds = db.KhachHangs.Select(s => new
+            {
+                s.ID,
+                s.HoTen,
+                s.GioiTinh,
+                s.NgaySinh,
+                s.QueQuan,
+                s.CMND,
+                s.SDT,
+                
+            }).ToList();
+            return ds;
+        }
+        public dynamic LayDSPTheoPhongNho()
+        {
+            var ds = db.Phongs.Where(s => s.TrangThai == false && s.LoaiPhongID == 1)
+                .Select(s => new {
+                    s.ID,
+                    TenLoaiPhong = s.LoaiPhong.Ten,
+                    s.SoPhong,
+                    s.LoaiPhong.Gia
+                }).ToList();
+            return ds;
+        }
+        public dynamic LayDSPTheoPhongVua()
+        {
+            var ds = db.Phongs.Where(s => s.TrangThai == false && s.LoaiPhongID == 2)
+                .Select(s => new {
+                    s.ID,
+                    TenLoaiPhong = s.LoaiPhong.Ten,
+                    s.SoPhong,
+                    s.LoaiPhong.Gia,
+                }).ToList();
+            return ds;
+        }
+        public dynamic LayDSPTheoPhongLon()
+        {
+            var ds = db.Phongs.Where(s => s.TrangThai == false && s.LoaiPhongID == 3)
+                .Select(s => new {
+                    s.ID,
+                    TenLoaiPhong = s.LoaiPhong.Ten,
+                    s.SoPhong,
+                    s.LoaiPhong.Gia,
+                }).ToList();
+            return ds;
+        }
+        public dynamic LayDSLoaiPhong()
+        {
+            var ds = db.LoaiPhongs.Select(s => new
+            {
+                s.ID,
+                s.Ten,
+                s.Gia
+            }).ToList();
+            return ds;
+        }
         public bool KiemTraKH(KhachHang kh)
         {
             KhachHang cp = db.KhachHangs.Find(kh.ID);
@@ -64,21 +122,19 @@ namespace QLNhaTro.DAO
         public void SuaKH(KhachHang kh)
         {
             KhachHang cp = db.KhachHangs.Find(kh.ID);
-            cp.ID = kh.ID;
+            
             cp.HoTen = kh.HoTen;
             cp.GioiTinh = kh.GioiTinh;
             cp.NgaySinh = kh.NgaySinh;
             cp.QueQuan = kh.QueQuan;
             cp.SDT = kh.SDT;
             cp.CMND = kh.CMND;
-            cp.ThuePhongs = kh.ThuePhongs;
             db.SaveChanges();
         }
-
         public void XoaKH(KhachHang kh)
         {
-            KhachHang cp = db.KhachHangs.Find(kh.ID);
-            db.KhachHangs.Remove(cp);
+            KhachHang thue = db.KhachHangs.Find(kh.ID);
+            db.KhachHangs.Remove(thue);
             db.SaveChanges();
         }
     }
