@@ -45,11 +45,11 @@ namespace QLNhaTro
                 tbMa.Text = dgvKH.Rows[e.RowIndex].Cells["ID"].Value.ToString();
                 tbTen.Text = dgvKH.Rows[e.RowIndex].Cells["HoTen"].Value.ToString();
                 tbSdt.Text = dgvKH.Rows[e.RowIndex].Cells["SDT"].Value.ToString();
-                cbGioiTinh.Text = dgvKH.Rows[e.RowIndex].Cells["GioiTinh"].Value.ToString();
+                tbGioiTinh.Text = dgvKH.Rows[e.RowIndex].Cells["GioiTinh"].Value.ToString();
                 tbCMND.Text = dgvKH.Rows[e.RowIndex].Cells["CMND"].Value.ToString();
                 tbQueQuan.Text = dgvKH.Rows[e.RowIndex].Cells["QueQuan"].Value.ToString();
                 dtpNgay.Text = dgvKH.Rows[e.RowIndex].Cells["NgaySinh"].Value.ToString();
-                //cbPhong.Text = dgvKH.Rows[e.RowIndex].Cells["GioiTinh"].Value.ToString();
+                
             }
         }
 
@@ -58,7 +58,7 @@ namespace QLNhaTro
             KhachHang kh = new KhachHang();
             kh.ID = int.Parse(tbMa.Text);
             kh.HoTen = tbTen.Text;
-            kh.GioiTinh = cbGioiTinh.Text;
+            kh.GioiTinh = tbGioiTinh.Text;
             kh.NgaySinh = dtpNgay.Value;
             kh.QueQuan = tbQueQuan.Text;
             kh.SDT = tbSdt.Text;

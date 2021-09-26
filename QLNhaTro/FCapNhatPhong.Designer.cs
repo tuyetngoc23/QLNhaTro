@@ -40,7 +40,7 @@
             this.btThem = new System.Windows.Forms.Button();
             this.btSua = new System.Windows.Forms.Button();
             this.btXoa = new System.Windows.Forms.Button();
-            this.cbLoai = new System.Windows.Forms.ComboBox();
+            this.cbLoaiPhong = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhong)).BeginInit();
             this.SuspendLayout();
             // 
@@ -155,16 +155,13 @@
             this.btXoa.UseVisualStyleBackColor = true;
             this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
             // 
-            // cbLoai
+            // cbLoaiPhong
             // 
-            this.cbLoai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbLoai.FormattingEnabled = true;
-            this.cbLoai.Location = new System.Drawing.Point(648, 106);
-            this.cbLoai.Name = "cbLoai";
-            this.cbLoai.Size = new System.Drawing.Size(215, 33);
-            this.cbLoai.TabIndex = 19;
-            this.cbLoai.UseWaitCursor = true;
-            this.cbLoai.SelectedIndexChanged += new System.EventHandler(this.cbLoai_SelectedIndexChanged);
+            this.cbLoaiPhong.FormattingEnabled = true;
+            this.cbLoaiPhong.Location = new System.Drawing.Point(648, 107);
+            this.cbLoaiPhong.Name = "cbLoaiPhong";
+            this.cbLoaiPhong.Size = new System.Drawing.Size(215, 33);
+            this.cbLoaiPhong.TabIndex = 21;
             // 
             // FCapNhatPhong
             // 
@@ -172,7 +169,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PowderBlue;
             this.ClientSize = new System.Drawing.Size(959, 440);
-            this.Controls.Add(this.cbLoai);
+            this.Controls.Add(this.cbLoaiPhong);
             this.Controls.Add(this.btXoa);
             this.Controls.Add(this.btSua);
             this.Controls.Add(this.btThem);
@@ -213,6 +210,6 @@
         private System.Windows.Forms.Button btThem;
         private System.Windows.Forms.Button btSua;
         private System.Windows.Forms.Button btXoa;
-        private System.Windows.Forms.ComboBox cbLoai;
+        private System.Windows.Forms.ComboBox cbLoaiPhong;
     }
 }

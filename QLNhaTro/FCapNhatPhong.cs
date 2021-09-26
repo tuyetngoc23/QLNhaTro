@@ -32,7 +32,7 @@ namespace QLNhaTro
         private void FCapNhatPhong_Load(object sender, EventArgs e)
         {
             HienThiDSPhong();
-            //busP.LayDSLoaiPhong(cbLoai);
+            busP.LayDSLoaiPhong(cbLoaiPhong);
         }
 
         private void dgvPhong_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -40,32 +40,18 @@ namespace QLNhaTro
             if(e.RowIndex >= 0 && e.RowIndex < dgvPhong.Rows.Count)
             {
                 tbMa.Text = dgvPhong.Rows[e.RowIndex].Cells[0].Value.ToString();
-                cbLoai.Text = dgvPhong.Rows[e.RowIndex].Cells[1].Value.ToString();
+                cbLoaiPhong.Text = dgvPhong.Rows[e.RowIndex].Cells[1].Value.ToString();
                 tbPhong.Text = dgvPhong.Rows[e.RowIndex].Cells[2].Value.ToString();
                 tbGia.Text = dgvPhong.Rows[e.RowIndex].Cells[3].Value.ToString();
             }
         }
-        private void cbLoai_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cbLoai.SelectedIndex == 0)
-            {
-                busP.LayDSPTheoPhongNho(dgvPhong);
-            }
-            else if (cbLoai.SelectedIndex == 1)
-            {
-                busP.LayDSPTheoPhongVua(dgvPhong);
-            }
-            else if (cbLoai.SelectedIndex == 2)
-            {
-                busP.LayDSPTheoPhongLon(dgvPhong);
-            }
-        }
+        
         private void btThem_Click(object sender, EventArgs e)
         {
             Phong p = new Phong();
             p.ID = int.Parse(tbMa.Text);
             p.SoPhong = int.Parse(tbPhong.Text);
-            //p.LoaiPhong = cbLoai.SelectedValue.ToString();
+            p.LoaiPhongID = int.Parse(cbLoaiPhong.SelectedValue.ToString());
             if (busP.ThemPhong(p))
             {
                 MessageBox.Show("Thêm phòng thành công");
@@ -83,7 +69,7 @@ namespace QLNhaTro
             Phong p = new Phong();
             p.ID = int.Parse(tbMa.Text);
             p.SoPhong = int.Parse(tbPhong.Text);
-           //p.LoaiPhong = cbLoai.Text;
+            p.LoaiPhongID = int.Parse(cbLoaiPhong.SelectedValue.ToString());
             //Gọi sự kiện sửa của BUS
             if (busP.SuaPhong(p))
             {

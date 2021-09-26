@@ -45,7 +45,7 @@
             this.btCSua = new System.Windows.Forms.Button();
             this.btXoa = new System.Windows.Forms.Button();
             this.dtpNgay = new System.Windows.Forms.DateTimePicker();
-            this.cbGioiTinh = new System.Windows.Forms.ComboBox();
+            this.tbGioiTinh = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKH)).BeginInit();
             this.SuspendLayout();
             // 
@@ -201,17 +201,12 @@
             this.dtpNgay.Size = new System.Drawing.Size(200, 30);
             this.dtpNgay.TabIndex = 21;
             // 
-            // cbGioiTinh
+            // tbGioiTinh
             // 
-            this.cbGioiTinh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbGioiTinh.FormattingEnabled = true;
-            this.cbGioiTinh.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ"});
-            this.cbGioiTinh.Location = new System.Drawing.Point(648, 141);
-            this.cbGioiTinh.Name = "cbGioiTinh";
-            this.cbGioiTinh.Size = new System.Drawing.Size(202, 33);
-            this.cbGioiTinh.TabIndex = 22;
+            this.tbGioiTinh.Location = new System.Drawing.Point(648, 144);
+            this.tbGioiTinh.Name = "tbGioiTinh";
+            this.tbGioiTinh.Size = new System.Drawing.Size(202, 30);
+            this.tbGioiTinh.TabIndex = 23;
             // 
             // FCapNhatKH
             // 
@@ -219,7 +214,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PowderBlue;
             this.ClientSize = new System.Drawing.Size(1072, 440);
-            this.Controls.Add(this.cbGioiTinh);
+            this.Controls.Add(this.tbGioiTinh);
             this.Controls.Add(this.dtpNgay);
             this.Controls.Add(this.btXoa);
             this.Controls.Add(this.btCSua);
@@ -269,6 +264,6 @@
         private System.Windows.Forms.Button btCSua;
         private System.Windows.Forms.Button btXoa;
         private System.Windows.Forms.DateTimePicker dtpNgay;
-        private System.Windows.Forms.ComboBox cbGioiTinh;
+        private System.Windows.Forms.TextBox tbGioiTinh;
     }
 }
