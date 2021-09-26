@@ -127,7 +127,7 @@ namespace QLNhaTro.DAO
         {
             Phong P = db.Phongs.Find(p.ID);
             P.LoaiPhongID = p.LoaiPhongID;
-            p.SoPhong = p.SoPhong;
+            P.SoPhong = p.SoPhong;
             db.SaveChanges();
         }
 
