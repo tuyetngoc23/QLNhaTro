@@ -28,17 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dvgTraPhong = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tbTenPhong = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.tbSoPhong = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.tbMaKhach = new System.Windows.Forms.TextBox();
@@ -85,14 +80,6 @@
             // dvgTraPhong
             // 
             this.dvgTraPhong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dvgTraPhong.DefaultCellStyle = dataGridViewCellStyle2;
             this.dvgTraPhong.Location = new System.Drawing.Point(6, 27);
             this.dvgTraPhong.Name = "dvgTraPhong";
             this.dvgTraPhong.RowHeadersWidth = 51;
@@ -106,10 +93,6 @@
             this.groupBox3.BackColor = System.Drawing.Color.DarkCyan;
             this.groupBox3.Controls.Add(this.tbTenPhong);
             this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Controls.Add(this.textBox5);
-            this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Controls.Add(this.textBox4);
-            this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.tbSoPhong);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.tbMaKhach);
@@ -142,42 +125,6 @@
             this.label7.Size = new System.Drawing.Size(151, 31);
             this.label7.TabIndex = 10;
             this.label7.Text = "Tên phòng:";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(400, 58);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(178, 38);
-            this.textBox5.TabIndex = 9;
-            this.textBox5.Tag = "";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(305, 61);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 31);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "SĐT:";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(689, 58);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(178, 38);
-            this.textBox4.TabIndex = 7;
-            this.textBox4.Tag = "";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(594, 61);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(105, 31);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Địa chỉ:";
             // 
             // tbSoPhong
             // 
@@ -356,10 +303,6 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox tbTenPhong;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox tbSoPhong;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tbMaKhach;

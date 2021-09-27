@@ -26,7 +26,7 @@ namespace QLNhaTro
         public Nullable<System.DateTime> NgayThue { get; set; }
         public Nullable<System.DateTime> NgayNhanCoc { get; set; }
         public Nullable<int> KhachHangID { get; set; }
-        public int PhongID { get; set; }
+        public Nullable<int> PhongID { get; set; }
         public Nullable<bool> TrangThaiThanhToan { get; set; }
         public Nullable<bool> TrangThaiTraPhong { get; set; }
     

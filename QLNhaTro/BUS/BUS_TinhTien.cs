@@ -28,7 +28,7 @@ namespace QLNhaTro.BUS
         }
         public void TinhTien(DataTable dtTinhTien)
         {
-            foreach(DataRow item in dtTinhTien.Rows)
+            foreach (DataRow item in dtTinhTien.Rows)
             {
                 HoaDon hd = new HoaDon();
                 hd.ThuePhongID = int.Parse(item[0].ToString());

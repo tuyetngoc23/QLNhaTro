@@ -168,10 +168,6 @@ namespace QLNhaTro
             }
             if(co)
             {
-                MessageBox.Show("Vui lòng tính tông tiền");
-            }
-            else
-            {
                 dtTinhTien.Rows.Add(r);
                 bTinhTien.TinhTien(dtTinhTien);
                 MessageBox.Show("Thanh toán thành công");
@@ -184,6 +180,10 @@ namespace QLNhaTro
                 tbTongTien.Text = "0";
                 tbSoDien.Text = "0";
                 tbSoNuoc.Text = "0";
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng tính tông tiền");
             }
         }
     }
