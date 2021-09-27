@@ -49,7 +49,6 @@ namespace QLNhaTro
         private void btThem_Click(object sender, EventArgs e)
         {
             Phong p = new Phong();
-            p.ID = int.Parse(tbMa.Text);
             p.SoPhong = int.Parse(tbPhong.Text);
             p.LoaiPhongID = int.Parse(cbLoaiPhong.SelectedValue.ToString());
             if (busP.ThemPhong(p))
