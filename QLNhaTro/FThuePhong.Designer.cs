@@ -30,6 +30,8 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dGVPhong = new System.Windows.Forms.DataGridView();
@@ -83,7 +85,7 @@
             this.label1.ForeColor = System.Drawing.Color.Red;
             this.label1.Location = new System.Drawing.Point(392, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(222, 36);
+            this.label1.Size = new System.Drawing.Size(297, 46);
             this.label1.TabIndex = 0;
             this.label1.Text = "THUÊ PHÒNG";
             // 
@@ -107,6 +109,14 @@
             this.dGVPhong.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dGVPhong.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dGVPhong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dGVPhong.DefaultCellStyle = dataGridViewCellStyle2;
             this.dGVPhong.Location = new System.Drawing.Point(6, 74);
             this.dGVPhong.Name = "dGVPhong";
             this.dGVPhong.RowHeadersVisible = false;
@@ -122,7 +132,7 @@
             this.cbLoaiPhong.FormattingEnabled = true;
             this.cbLoaiPhong.Location = new System.Drawing.Point(146, 29);
             this.cbLoaiPhong.Name = "cbLoaiPhong";
-            this.cbLoaiPhong.Size = new System.Drawing.Size(121, 33);
+            this.cbLoaiPhong.Size = new System.Drawing.Size(121, 39);
             this.cbLoaiPhong.TabIndex = 2;
             this.cbLoaiPhong.SelectedIndexChanged += new System.EventHandler(this.cbLoaiPhong_SelectedIndexChanged);
             // 
@@ -132,7 +142,7 @@
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(8, 32);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(115, 25);
+            this.label8.Size = new System.Drawing.Size(155, 31);
             this.label8.TabIndex = 1;
             this.label8.Text = "Loại phòng:";
             // 
@@ -166,7 +176,7 @@
             this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgaySinh.Location = new System.Drawing.Point(391, 54);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
-            this.dtpNgaySinh.Size = new System.Drawing.Size(191, 30);
+            this.dtpNgaySinh.Size = new System.Drawing.Size(191, 38);
             this.dtpNgaySinh.TabIndex = 26;
             // 
             // tbMaKhach
@@ -174,7 +184,7 @@
             this.tbMaKhach.Enabled = false;
             this.tbMaKhach.Location = new System.Drawing.Point(76, 22);
             this.tbMaKhach.Name = "tbMaKhach";
-            this.tbMaKhach.Size = new System.Drawing.Size(191, 30);
+            this.tbMaKhach.Size = new System.Drawing.Size(191, 38);
             this.tbMaKhach.TabIndex = 13;
             // 
             // label9
@@ -183,7 +193,7 @@
             this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.Location = new System.Drawing.Point(6, 25);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(46, 25);
+            this.label9.Size = new System.Drawing.Size(59, 31);
             this.label9.TabIndex = 12;
             this.label9.Text = "Mã:";
             // 
@@ -191,7 +201,7 @@
             // 
             this.tbDiaChi.Location = new System.Drawing.Point(76, 118);
             this.tbDiaChi.Name = "tbDiaChi";
-            this.tbDiaChi.Size = new System.Drawing.Size(191, 30);
+            this.tbDiaChi.Size = new System.Drawing.Size(191, 38);
             this.tbDiaChi.TabIndex = 11;
             // 
             // label7
@@ -200,7 +210,7 @@
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(6, 121);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(105, 25);
+            this.label7.Size = new System.Drawing.Size(140, 31);
             this.label7.TabIndex = 10;
             this.label7.Text = "Quê quán:";
             // 
@@ -208,7 +218,7 @@
             // 
             this.tbCMND.Location = new System.Drawing.Point(76, 86);
             this.tbCMND.Name = "tbCMND";
-            this.tbCMND.Size = new System.Drawing.Size(191, 30);
+            this.tbCMND.Size = new System.Drawing.Size(191, 38);
             this.tbCMND.TabIndex = 9;
             // 
             // label6
@@ -217,7 +227,7 @@
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(6, 89);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 25);
+            this.label6.Size = new System.Drawing.Size(104, 31);
             this.label6.TabIndex = 8;
             this.label6.Text = "CMND:";
             // 
@@ -225,7 +235,7 @@
             // 
             this.tbSdt.Location = new System.Drawing.Point(392, 86);
             this.tbSdt.Name = "tbSdt";
-            this.tbSdt.Size = new System.Drawing.Size(191, 30);
+            this.tbSdt.Size = new System.Drawing.Size(191, 38);
             this.tbSdt.TabIndex = 7;
             // 
             // label5
@@ -234,7 +244,7 @@
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(292, 86);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 25);
+            this.label5.Size = new System.Drawing.Size(69, 31);
             this.label5.TabIndex = 6;
             this.label5.Text = "SĐT";
             // 
@@ -244,7 +254,7 @@
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(292, 57);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(105, 25);
+            this.label4.Size = new System.Drawing.Size(143, 31);
             this.label4.TabIndex = 4;
             this.label4.Text = "Ngày sinh:";
             // 
@@ -252,7 +262,7 @@
             // 
             this.tbGioiTinh.Location = new System.Drawing.Point(392, 22);
             this.tbGioiTinh.Name = "tbGioiTinh";
-            this.tbGioiTinh.Size = new System.Drawing.Size(191, 30);
+            this.tbGioiTinh.Size = new System.Drawing.Size(191, 38);
             this.tbGioiTinh.TabIndex = 3;
             // 
             // label3
@@ -261,7 +271,7 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(292, 25);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 25);
+            this.label3.Size = new System.Drawing.Size(121, 31);
             this.label3.TabIndex = 2;
             this.label3.Text = "Giới tính:";
             // 
@@ -269,7 +279,7 @@
             // 
             this.tbTen.Location = new System.Drawing.Point(76, 54);
             this.tbTen.Name = "tbTen";
-            this.tbTen.Size = new System.Drawing.Size(191, 30);
+            this.tbTen.Size = new System.Drawing.Size(191, 38);
             this.tbTen.TabIndex = 1;
             // 
             // label2
@@ -278,7 +288,7 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(6, 57);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 25);
+            this.label2.Size = new System.Drawing.Size(102, 31);
             this.label2.TabIndex = 0;
             this.label2.Text = "Họ tên:";
             // 
@@ -296,10 +306,18 @@
             // 
             // dGVKhachHang
             // 
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            this.dGVKhachHang.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.dGVKhachHang.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dGVKhachHang.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dGVKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dGVKhachHang.DefaultCellStyle = dataGridViewCellStyle4;
             this.dGVKhachHang.Location = new System.Drawing.Point(6, 23);
             this.dGVKhachHang.Name = "dGVKhachHang";
             this.dGVKhachHang.RowHeadersVisible = false;
@@ -331,7 +349,7 @@
             this.tbTienPhong.Enabled = false;
             this.tbTienPhong.Location = new System.Drawing.Point(466, 29);
             this.tbTienPhong.Name = "tbTienPhong";
-            this.tbTienPhong.Size = new System.Drawing.Size(121, 30);
+            this.tbTienPhong.Size = new System.Drawing.Size(121, 38);
             this.tbTienPhong.TabIndex = 21;
             // 
             // label12
@@ -340,7 +358,7 @@
             this.label12.ForeColor = System.Drawing.Color.Black;
             this.label12.Location = new System.Drawing.Point(388, 32);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(84, 25);
+            this.label12.Size = new System.Drawing.Size(115, 31);
             this.label12.TabIndex = 20;
             this.label12.Text = "Giá tiền:";
             // 
@@ -349,7 +367,7 @@
             this.tbPhong.Enabled = false;
             this.tbPhong.Location = new System.Drawing.Point(267, 29);
             this.tbPhong.Name = "tbPhong";
-            this.tbPhong.Size = new System.Drawing.Size(121, 30);
+            this.tbPhong.Size = new System.Drawing.Size(121, 38);
             this.tbPhong.TabIndex = 19;
             // 
             // label11
@@ -358,7 +376,7 @@
             this.label11.ForeColor = System.Drawing.Color.Black;
             this.label11.Location = new System.Drawing.Point(174, 32);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(97, 25);
+            this.label11.Size = new System.Drawing.Size(129, 31);
             this.label11.TabIndex = 18;
             this.label11.Text = "Số phòng";
             // 
@@ -367,7 +385,7 @@
             this.tbMaPhong.Enabled = false;
             this.tbMaPhong.Location = new System.Drawing.Point(49, 29);
             this.tbMaPhong.Name = "tbMaPhong";
-            this.tbMaPhong.Size = new System.Drawing.Size(121, 30);
+            this.tbMaPhong.Size = new System.Drawing.Size(121, 38);
             this.tbMaPhong.TabIndex = 17;
             // 
             // label10
@@ -376,7 +394,7 @@
             this.label10.ForeColor = System.Drawing.Color.Black;
             this.label10.Location = new System.Drawing.Point(6, 32);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(46, 25);
+            this.label10.Size = new System.Drawing.Size(59, 31);
             this.label10.TabIndex = 16;
             this.label10.Text = "Mã:";
             // 
@@ -385,7 +403,7 @@
             this.tbMaThue.Enabled = false;
             this.tbMaThue.Location = new System.Drawing.Point(418, 316);
             this.tbMaThue.Name = "tbMaThue";
-            this.tbMaThue.Size = new System.Drawing.Size(163, 30);
+            this.tbMaThue.Size = new System.Drawing.Size(163, 38);
             this.tbMaThue.TabIndex = 23;
             // 
             // label13
@@ -394,7 +412,7 @@
             this.label13.ForeColor = System.Drawing.Color.Black;
             this.label13.Location = new System.Drawing.Point(290, 319);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(143, 25);
+            this.label13.Size = new System.Drawing.Size(193, 31);
             this.label13.TabIndex = 22;
             this.label13.Text = "Mã thuê phòng";
             // 
@@ -404,7 +422,7 @@
             this.label14.ForeColor = System.Drawing.Color.Black;
             this.label14.Location = new System.Drawing.Point(290, 352);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(149, 25);
+            this.label14.Size = new System.Drawing.Size(203, 31);
             this.label14.TabIndex = 24;
             this.label14.Text = "Ngày nhận cọc:";
             // 
@@ -413,7 +431,7 @@
             this.dtpNgayNhanCoc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgayNhanCoc.Location = new System.Drawing.Point(418, 351);
             this.dtpNgayNhanCoc.Name = "dtpNgayNhanCoc";
-            this.dtpNgayNhanCoc.Size = new System.Drawing.Size(163, 30);
+            this.dtpNgayNhanCoc.Size = new System.Drawing.Size(163, 38);
             this.dtpNgayNhanCoc.TabIndex = 25;
             // 
             // btThue
@@ -440,7 +458,7 @@
             // 
             this.tbTienCoc.Location = new System.Drawing.Point(418, 386);
             this.tbTienCoc.Name = "tbTienCoc";
-            this.tbTienCoc.Size = new System.Drawing.Size(163, 30);
+            this.tbTienCoc.Size = new System.Drawing.Size(163, 38);
             this.tbTienCoc.TabIndex = 30;
             // 
             // label15
@@ -449,7 +467,7 @@
             this.label15.ForeColor = System.Drawing.Color.Black;
             this.label15.Location = new System.Drawing.Point(290, 389);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(93, 25);
+            this.label15.Size = new System.Drawing.Size(125, 31);
             this.label15.TabIndex = 29;
             this.label15.Text = "Tiền cọc:";
             // 
@@ -465,7 +483,7 @@
             // 
             // FThuePhong
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PowderBlue;
             this.ClientSize = new System.Drawing.Size(896, 439);

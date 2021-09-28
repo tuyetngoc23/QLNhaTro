@@ -90,9 +90,9 @@ namespace QLNhaTro.BUS
                     dPhong.XoaLoaiPhong(lp);
                     return true;
                 }
-                catch (DbUpdateException ex)
+                catch (Exception)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show("Không thể xóa loại phòng đang được thuê");
                     return false;
                 }
             }
@@ -144,9 +144,9 @@ namespace QLNhaTro.BUS
                     dPhong.XoaPhong(p);
                     return true;
                 }
-                catch (DbUpdateException ex)
+                catch (Exception)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show("Không thể xóa phòng đang được thuê");
                     return false;
                 }
             }

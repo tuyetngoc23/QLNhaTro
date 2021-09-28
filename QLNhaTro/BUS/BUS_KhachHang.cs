@@ -126,7 +126,7 @@ namespace QLNhaTro.BUS
                     dKH.XoaKH(kh);
                     return true;
                 }
-                catch (DbUpdateException)
+                catch (Exception)
                 {
                     //MessageBox.Show(ex.Message);
                     MessageBox.Show("Khách hàng hiện đang thuê, không thể xóa");
