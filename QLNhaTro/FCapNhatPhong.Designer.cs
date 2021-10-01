@@ -79,6 +79,7 @@
             // tbMa
             // 
             this.tbMa.BackColor = System.Drawing.Color.White;
+            this.tbMa.Enabled = false;
             this.tbMa.Location = new System.Drawing.Point(183, 69);
             this.tbMa.Name = "tbMa";
             this.tbMa.Size = new System.Drawing.Size(215, 30);
@@ -111,6 +112,7 @@
             // 
             // tbGia
             // 
+            this.tbGia.Enabled = false;
             this.tbGia.Location = new System.Drawing.Point(648, 68);
             this.tbGia.Name = "tbGia";
             this.tbGia.Size = new System.Drawing.Size(215, 30);

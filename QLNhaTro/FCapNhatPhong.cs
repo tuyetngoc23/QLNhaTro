@@ -51,6 +51,7 @@ namespace QLNhaTro
             Phong p = new Phong();
             p.SoPhong = int.Parse(tbPhong.Text);
             p.LoaiPhongID = int.Parse(cbLoaiPhong.SelectedValue.ToString());
+            p.TrangThai = false;
             if (busP.ThemPhong(p))
             {
                 MessageBox.Show("Thêm phòng thành công");

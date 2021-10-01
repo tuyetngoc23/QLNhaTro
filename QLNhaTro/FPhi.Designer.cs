@@ -77,6 +77,7 @@
             // tbMa
             // 
             this.tbMa.BackColor = System.Drawing.SystemColors.Window;
+            this.tbMa.Enabled = false;
             this.tbMa.Location = new System.Drawing.Point(112, 81);
             this.tbMa.Name = "tbMa";
             this.tbMa.ReadOnly = true;
